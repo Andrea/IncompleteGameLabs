@@ -1,0 +1,11 @@
+<Configuration>
+  <CoverageFilters>
+    <IncludeFilters>
+      <Filter ModuleMask="*" ClassMask="*" FunctionMask="*" />
+    </IncludeFilters>
+    <ExcludeFilters />
+  </CoverageFilters>
+  <SnapshotDialog>
+    <InitialDirectory>C:\source\GameLabs-v2Incomplete\Lab1-AnimatedSprites\AnimatedSpritesLabIncomplete</InitialDirectory>
+  </SnapshotDialog>
+</Configuration>
