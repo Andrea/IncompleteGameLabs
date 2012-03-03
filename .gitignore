@@ -11,4 +11,5 @@ _ReSharper.*
 *.Cache
 *.cachefile
 *.cache
+*.dotCover
 ~$*
