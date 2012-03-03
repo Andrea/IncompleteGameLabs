@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollisionDetection", "CollisionDetection\CollisionDetection\CollisionDetection.csproj", "{64A25808-DCD7-435D-AFD8-9F7E28B668C4}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "CollisionDetectionContent", "CollisionDetection\CollisionDetectionContent\CollisionDetectionContent.contentproj", "{D02EE50C-1568-44C7-A509-E90BD7AD0B20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64A25808-DCD7-435D-AFD8-9F7E28B668C4}.Debug|x86.ActiveCfg = Debug|x86
+		{64A25808-DCD7-435D-AFD8-9F7E28B668C4}.Debug|x86.Build.0 = Debug|x86
+		{64A25808-DCD7-435D-AFD8-9F7E28B668C4}.Release|x86.ActiveCfg = Release|x86
+		{64A25808-DCD7-435D-AFD8-9F7E28B668C4}.Release|x86.Build.0 = Release|x86
+		{D02EE50C-1568-44C7-A509-E90BD7AD0B20}.Debug|x86.ActiveCfg = Debug|x86
+		{D02EE50C-1568-44C7-A509-E90BD7AD0B20}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
