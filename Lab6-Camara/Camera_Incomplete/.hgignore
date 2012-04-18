@@ -1,0 +1,15 @@
+syntax: glob
+*/obj/*
+*/bin/*
+tools/*
+*.user
+*.suo
+*/_ReSharper*/
+src/packages/*
+*.docstates
+build/*
+StyleCop.Cache
+*.vs10x
+*.orig
+*.dotCover
+*.csproj.Debug.cachefile
