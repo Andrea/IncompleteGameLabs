@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Modifiers="ProjectMercury.Modifiers">
+  <Asset Type="ProjectMercury.ParticleEffect">
+    <Item>
+      <Name>Flower Petals</Name>
+      <Budget>500</Budget>
+      <Term>2</Term>
+      <ReleaseQuantity>3</ReleaseQuantity>
+      <Enabled>true</Enabled>
+      <ReleaseSpeed>
+        <Value>48</Value>
+        <Variation>16</Variation>
+      </ReleaseSpeed>
+      <ReleaseColour>
+        <Value>1 1 1</Value>
+        <Variation>0 0 0</Variation>
+      </ReleaseColour>
+      <ReleaseOpacity>
+        <Value>1</Value>
+        <Variation>0</Variation>
+      </ReleaseOpacity>
+      <ReleaseScale>
+        <Value>64</Value>
+        <Variation>0</Variation>
+      </ReleaseScale>
+      <ReleaseRotation>
+        <Value>0</Value>
+        <Variation>0</Variation>
+      </ReleaseRotation>
+      <ReleaseImpulse>0 0</ReleaseImpulse>
+      <ParticleTextureAssetName>Particle007</ParticleTextureAssetName>
+      <Modifiers>
+        <Item Type="Modifiers:TrajectoryRotationModifier">
+          <RotationOffset>0</RotationOffset>
+        </Item>
+        <Item Type="Modifiers:ScaleModifier">
+          <InitialScale>16</InitialScale>
+          <UltimateScale>128</UltimateScale>
+        </Item>
+        <Item Type="Modifiers:OpacityInterpolatorModifier">
+          <InitialOpacity>1</InitialOpacity>
+          <MiddleOpacity>1</MiddleOpacity>
+          <MiddlePosition>0.8</MiddlePosition>
+          <FinalOpacity>0</FinalOpacity>
+        </Item>
+        <Item Type="Modifiers:ColourInterpolatorModifier">
+          <InitialColour>0 0.5019608 0</InitialColour>
+          <MiddleColour>1 1 1</MiddleColour>
+          <MiddlePosition>0.5</MiddlePosition>
+          <FinalColour>1 0 1</FinalColour>
+        </Item>
+      </Modifiers>
+      <BlendMode>Alpha</BlendMode>
+      <TriggerOffset>0 0</TriggerOffset>
+      <MinimumTriggerPeriod>0</MinimumTriggerPeriod>
+    </Item>
+    <Name>Flower Bloom</Name>
+    <Author>Matt Davey</Author>
+    <Description>Bloomin' flowers!</Description>
+  </Asset>
+</XnaContent>

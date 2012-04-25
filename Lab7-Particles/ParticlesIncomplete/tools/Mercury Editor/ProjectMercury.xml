@@ -1,0 +1,3005 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjectMercury</name>
+    </assembly>
+    <members>
+        <member name="T:ProjectMercury.ParticleEffect">
+            <summary>
+            Defines the root of a particle effect hierarchy.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Emitters.EmitterCollection">
+            <summary>
+            Defines a collection of Emitter objects.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.EmitterCollection.Item(System.String)">
+            <summary>
+            Gets the element with the specified name.
+            </summary>
+            <param name="name">The name of the Emitter to fetch.</param>
+            <returns>The first Emitter whose name matches the specified name.</returns>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.OnNameChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:NameChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:ProjectMercury.ParticleEffect.Author">
+            <summary>
+            Gets or sets the author of the ParticleEffect.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.ParticleEffect.Description">
+            <summary>
+            Gets or sets the description of the ParticleEffect.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProjectMercury.ParticleEffect"/> class.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.DeepCopy">
+            <summary>
+            Returns a deep copy of the ParticleEffect.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.Trigger(Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Triggers the ParticleEffect at the specified position.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.Trigger(Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Triggers the ParticleEffect at the specified position.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.Initialise">
+            <summary>
+            Initialises all Emitters within the ParticleEffect.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.Terminate">
+            <summary>
+            Terminates all Emitters within the ParticleEffect with immediate effect.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.LoadContent(Microsoft.Xna.Framework.Content.ContentManager)">
+            <summary>
+            Loads content required by Emitters within the ParticleEffect.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.Update(System.Single)">
+            <summary>
+            Updates all Emitters within the ParticleEffect.
+            </summary>
+            <param name="deltaSeconds">Elapsed frame time in whole and fractional seconds.</param>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffect.Update(System.Single,System.Single)">
+            <summary>
+            Updates all Emitters within the ParticleEffect.
+            </summary>
+            <param name="totalSeconds">Total game time in whole and fractional seconds.</param>
+            <param name="deltaSeconds">Elapsed frame time in whole and fractional seconds.</param>
+        </member>
+        <member name="P:ProjectMercury.ParticleEffect.Name">
+            <summary>
+            Gets or sets the name of the ParticleEffect.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="E:ProjectMercury.ParticleEffect.NameChanged">
+            <summary>
+            Occurs when name of the ParticleEffect has been changed.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.ParticleEffect.Controllers">
+            <summary>
+            Gets or sets the controller which is assigned to the ParticleEffect.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.ParticleEffect.ActiveParticlesCount">
+            <summary>
+            Gets the total number of active Particles in the ParticleEffect.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ScaleMergeModifier">
+            <summary>
+            Defines a Modifier which merges the scale of particles towards a single scale over their lifetime. Works best
+            when Particles are being released with random scale, where you require the particles to have a uniform scale
+            at the end of their lifetime.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.Modifier">
+            <summary>
+            Defines the base class for an object which modifies Particle values.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.Modifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.Modifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="elapsedSeconds">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to the first particle in an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ScaleMergeModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ScaleMergeModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ScaleMergeModifier.MergeScale">
+            <summary>
+            Gets or sets the final scale of Particles when they are retired.
+            </summary>
+            <value>The merge scale.</value>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.BoundingRectModifier">
+            <summary>
+            Defines a modifier which maintains a bounding rectangle around an Emitter.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.BoundingRectModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.BoundingRectModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="elapsedSeconds">Elapsed time in whole and fractional seconds.</param>
+            <param name="particle">A pointer to the first particle in an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.BoundingRectModifier.BoundingRect">
+            <summary>
+            Gets a bounding rectangle which encompasses each of the particles of an emitter.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.BoundingRectModifier.Padding">
+            <summary>
+            Gets or sets a padding value to add to the bounding rectangle.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Threading.Parallel">
+             <summary>
+             The class provides support for parallel computations, paralleling loop's iterations.
+             </summary>
+            
+             <remarks><para>The class allows to parallel loop's iteration computing them in separate threads,
+             what allows their simultaneous execution on multiple CPUs/cores.
+             </para></remarks>
+            
+        </member>
+        <member name="M:ProjectMercury.Threading.Parallel.For(System.Int32,System.Int32,ProjectMercury.Threading.Parallel.ForLoopBody)">
+             <summary>
+             Executes a for-loop in which iterations may run in parallel.
+             </summary>
+            
+             <param name="start">Loop's start index.</param>
+             <param name="stop">Loop's stop index.</param>
+             <param name="loopBody">Loop's body.</param>
+            
+             <remarks><para>The method is used to parallel for-loop running its iterations in
+             different threads. The <b>start</b> and <b>stop</b> parameters define loop's
+             starting and ending loop's indexes. The number of iterations is equal to <b>stop - start</b>.
+             </para>
+            
+             <para>Sample usage:</para>
+             <code>
+             Parallel.For( 0, 20, delegate( int i )
+             // which is equivalent to
+             // for ( int i = 0; i &lt; 20; i++ )
+             {
+                 System.Diagnostics.Debug.WriteLine( "Iteration: " + i );
+                 // ...
+             } );
+             </code>
+             </remarks>
+            
+        </member>
+        <member name="P:ProjectMercury.Threading.Parallel.ThreadsCount">
+             <summary>
+             Number of threads used for parallel computations.
+             </summary>
+            
+             <remarks><para>The property sets how many worker threads are created for paralleling
+             loops' computations.</para>
+            
+             <para>By default the property is set to number of CPU's in the system
+             (see <see cref="P:System.Environment.ProcessorCount"/>).</para>
+             </remarks>
+            
+        </member>
+        <member name="T:ProjectMercury.Threading.Parallel.ForLoopBody">
+             <summary>
+             Delegate defining for-loop's body.
+             </summary>
+            
+             <param name="index">Loop's index.</param>
+            
+        </member>
+        <member name="T:ProjectMercury.Renderers.Renderer">
+            <summary>
+            Defines the abstract base class for a Renderer.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Renderers.Renderer.GraphicsDeviceService">
+            <summary>
+            Hold a reference to the games GraphicsDeviceService.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.Renderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:ProjectMercury.Renderers.Renderer.Dispose">
+            <summary>
+            Disposes any unmanaged resources being used by this instance.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.Renderer.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:ProjectMercury.Renderers.Renderer"/> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.Renderer.LoadContent(Microsoft.Xna.Framework.Content.ContentManager)">
+            <summary>
+            Loads any content needed by the Renderer.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.Renderer.RenderEmitter(ProjectMercury.Emitters.Emitter)">
+            <summary>
+            Renders the specified Emitter.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.Renderer.RenderEmitter(ProjectMercury.Emitters.Emitter,Microsoft.Xna.Framework.Matrix@)">
+            <summary>
+            Renders the specified Emitter, applying the specified transformation offset.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.Renderer.RenderEffect(ProjectMercury.ParticleEffect)">
+            <summary>
+            Renders the specified ParticleEffect.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.Renderer.RenderEffect(ProjectMercury.ParticleEffect,Microsoft.Xna.Framework.Matrix@)">
+            <summary>
+            Renders the specified ParticleEffect, applying the specified transformation offset.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.SineForceModifier">
+            <summary>
+            Defines a Modifier which applies a sine wave force to a Particle over the course of its lifetime.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.SineForceModifier.Frequency">
+            <summary>
+            Gets or sets the frequency of the sine wave.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.SineForceModifier.Amplitude">
+            <summary>
+            Gets or sets the amplitude of the sine wave.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.SineForceModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.SineForceModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.SineForceModifier.Rotation">
+            <summary>
+            Gets or sets the rotation of the sine force.
+            </summary>
+            <value>The rotation angle in radians.</value>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.RectangleConstraintDeflector">
+            <summary>
+            Defines a Modifier which constrains &amp; deflects particles inside a rectangle.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RectangleConstraintDeflector.Position">
+            <summary>
+            Defines the position of the rectangle boundary constraint.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RectangleConstraintDeflector.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RectangleConstraintDeflector.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleConstraintDeflector.Width">
+            <summary>
+            Gets or sets the width of the rectangle deflector.
+            </summary>
+            <value>The width of the rectangle deflector.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleConstraintDeflector.Height">
+            <summary>
+            Gets or sets the height of the rectangle.
+            </summary>
+            <value>The height of the rectangle.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleConstraintDeflector.RestitutionCoefficient">
+            <summary>
+            Gets or sets the restitution coefficient (bounce factor) of Particles when the hit the deflector.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ColourInterpolatorModifier">
+            <summary>
+            Defines a modifier which changes the colour of particles based on a linear interpolation over three values.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ColourInterpolatorModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ColourInterpolatorModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="elapsedSeconds">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ColourInterpolatorModifier.InitialColour">
+            <summary>
+            Gets or sets the initial colour.
+            </summary>
+            <value>The initial colour.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ColourInterpolatorModifier.MiddleColour">
+            <summary>
+            Gets or sets the middle colour.
+            </summary>
+            <value>The middle colour.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ColourInterpolatorModifier.MiddlePosition">
+            <summary>
+            Gets or sets the middle colour position.
+            </summary>
+            <value>The middle position.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ColourInterpolatorModifier.FinalColour">
+            <summary>
+            Gets or sets the final colour.
+            </summary>
+            <value>The final colour.</value>
+        </member>
+        <member name="T:ProjectMercury.Controllers.TriggerQueueController">
+            <summary>
+            Defines a simple controller which queues triggers rather than applying them immediately.
+            The next queued trigger is applied when the particle effect has an active particle count of zero.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Controllers.Controller">
+            <summary>
+            Defines the abstract base class for a controller.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Controllers.Controller.Trigger(Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Called by the particle effect when it is triggered.
+            </summary>
+            <param name="position">The desired position of the trigger.</param>
+            <remarks>This method should not be called directly, the ParticleEffect class
+            will defer control to this method when the controller is assigned.</remarks>
+        </member>
+        <member name="M:ProjectMercury.Controllers.Controller.Update(System.Single)">
+            <summary>
+            Called by the particle effect when it is updated.
+            </summary>
+            <param name="deltaSeconds">Elapsed time in whole and fractional seconds.</param>
+            <remarks>This method should not be called directly, the ParticleEffect class
+            will defer control to this method when the controller is assigned.</remarks>
+        </member>
+        <member name="P:ProjectMercury.Controllers.Controller.ParticleEffect">
+            <summary>
+            Gets or sets which particle effect the controller is assigned to.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Controllers.TriggerQueueController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:QueueController"/> class.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Controllers.TriggerQueueController.Trigger(Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Called by the particle effect when it is triggered.
+            </summary>
+            <param name="position">The desired position of the trigger.</param>
+            <remarks>This method should not be called directly, the ParticleEffect class
+            will defer control to this method when the controller is assigned.</remarks>
+        </member>
+        <member name="M:ProjectMercury.Controllers.TriggerQueueController.Update(System.Single)">
+            <summary>
+            Called by the particle effect when it is updated.
+            </summary>
+            <param name="deltaSeconds">Elapsed time in whole and fractional seconds.</param>
+            <remarks>This method should not be called directly, the ParticleEffect class
+            will defer control to this method when the controller is assigned.</remarks>
+        </member>
+        <member name="P:ProjectMercury.Controllers.TriggerQueueController.QueuedTriggers">
+            <summary>
+            Gets the queued triggers which need to be applied to the particle effect.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.AsyncUpdateManager">
+            <summary>
+            Defines a class which handles updating of particle effects asynchronously.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.AsyncUpdateManager.DeltaSeconds">
+            <summary>
+            Gets or sets the elapsed time in whole and fractional seconds.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.AsyncUpdateManager.RunWorkerThread">
+            <summary>
+            Notifies the worker thread when to stop running.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.#ctor">
+            <summary>
+            Initialises a new instance of the AsyncUpdateManager class.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.Dispose">
+            <summary>
+            Dispose any unmanaged resources being used by this instance.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the <see cref="T:ProjectMercury.AsyncUpdateManager"/>
+            is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.Start">
+            <summary>
+            Starts the worker thread running in the background.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.Stop">
+            <summary>
+            Stops the worker thread.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.BeginUpdate(System.Single,ProjectMercury.ParticleEffect[])">
+            <summary>
+            Passes the specified particle effects to the worker thread for updating.
+            </summary>
+            <param name="deltaSeconds">Elapsed time in whole and fractional seconds.</param>
+            <param name="effects">The particle effects that should be updated.</param>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.EndUpdate">
+            <summary>
+            Blocks the calling thread until the worker thread has finished updating outstanding particle effects.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.AsyncUpdateManager.WorkerThread_Body">
+            <summary>
+            Worker thread body.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.AsyncUpdateManager.WorkerThread">
+            <summary>
+            Gets or sets the worker thread.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.AsyncUpdateManager.WorkAvailable">
+            <summary>
+            Thread event, raised when there is work available for the worker thread.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.AsyncUpdateManager.WorkDone">
+            <summary>
+            Thread event, raised when the worker thread has finished its current work.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.AsyncUpdateManager.WorkQueue">
+            <summary>
+            Gets or sets the queue of particle effects which need to be updated by the worker thread.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.RandomHelper">
+            <summary>
+            Defines helper methods for choosing random numbers or performing random operations.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.#cctor">
+            <summary>
+            Initializes the <see cref="T:ProjectMercury.RandomHelper"/> class.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextInt">
+            <summary>
+            Returns a non-negetive random whole number.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextInt(System.Int32)">
+            <summary>
+            Returns a non-negetive random whole number less than the specified maximum.
+            </summary>
+            <param name="max">The exclusive upper bound the random number to be generated.</param>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextInt(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number within a specified range.
+            </summary>
+            <param name="min">The inclusive lower bound of the random number returned.</param>
+            <param name="max">The exclusive upper bound of the random number returned.</param>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextFloat">
+            <summary>
+            Returns a random float between 0.0 and 1.0.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextFloat(System.Single)">
+            <summary>
+            Returns a random float betwen 0.0 and the specified upper bound.
+            </summary>
+            <param name="max">The inclusive upper bound of the random number returned.</param>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextFloat(System.Single,System.Single)">
+            <summary>
+            Returns a random float within the specified range.
+            </summary>
+            <param name="min">The inclusive lower bound of the random number returned.</param>
+            <param name="max">The inclusive upper bound of the random number returned.</param>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextFloat(ProjectMercury.Range)">
+            <summary>
+            Returns a random float within the specified range.
+            </summary>
+            <param name="range">The range of allowable values.</param>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextByte">
+            <summary>
+            Returns a random byte.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextBool">
+            <summary>
+            Returns a random boolean value.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.NextUnitVector">
+            <summary>
+            Returns a random two dimensional unit vector.
+            </summary>
+            <returns>A random two dimensional unit vector.</returns>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.Variation(System.Single,System.Single)">
+            <summary>
+            Returns a random variation of the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="variation">The variation amount.</param>
+            <example>A value of 10 with a variation of 5 will result in a random number between 5.0 and 15.</example>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.ChooseOne(System.Int32[])">
+            <summary>
+            Chooses a random item from the specified parameters and returns it.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.ChooseOne(System.Int32*,System.Int32)">
+            <summary>
+            Returns a pointer to a random element in the specified array.
+            </summary>
+            <param name="valuesArray">A pointer to the first element in an array of integers.</param>
+            <param name="length">The total number of elements in the array.</param>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.ChooseOne(System.Single[])">
+            <summary>
+            Chooses a random item from the specified parameters and returns it.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.ChooseOne(System.Single*,System.Int32)">
+            <summary>
+            Returns a pointer to a random element in the specified array.
+            </summary>
+            <param name="valuesArray">A pointer to the first element in an array of floating point values.</param>
+            <param name="length">The total number of elements in the array.</param>
+        </member>
+        <member name="M:ProjectMercury.RandomHelper.ChooseOne``1(``0[])">
+            <summary>
+            Chooses a random item from the specified parameters and returns it.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.RandomHelper.Random">
+            <summary>
+            Gets or sets the random number generator.
+            </summary>
+            <value>The random.</value>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.RadialGravityModifier">
+            <summary>
+            Defines a Modifier which pulls Particles towards it.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RadialGravityModifier.Position">
+            <summary>
+            The position of the gravity well.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RadialGravityModifier.Strength">
+            <summary>
+            The strength of the gravity well.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RadialGravityModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RadialGravityModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RadialGravityModifier.Radius">
+            <summary>
+            Gets or sets the radius of the gravity well.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the specified value is negetive or zero.</exception>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RadialGravityModifier.InnerRadius">
+            <summary>
+            Gets or sets the inner radius of the gravity well, within which Particles will not be attracted.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Emitters.Emitter">
+            <summary>
+            Defines the base class for a Particle Emitter. The basic implementation releases Particles from a single point.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.NextEmitterName">
+            <summary>
+            Gets a default name for the next Emitter.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.Enabled">
+            <summary>
+            Gets or sets a value indicating wether or not the Emitter is enabled (can be triggered).
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.Particles">
+            <summary>
+            Gets or sets the array of particles managed by the emitter.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.ReleaseSpeed">
+            <summary>
+            Gets or sets the speed at which Particles travel when they are released.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.ReleaseColour">
+            <summary>
+            Gets or sets the colour of released Particles.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.ReleaseOpacity">
+            <summary>
+            Gets or sets the opacity of released Particles.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.ReleaseScale">
+            <summary>
+            Gets or sets the scale of released particles.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.ReleaseRotation">
+            <summary>
+            Gets or sets the rotation of released Particles.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.ReleaseImpulse">
+            <summary>
+            Gets or sets the initial impulse applied to Particles as they are relased.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.ParticleTextureAssetName">
+            <summary>
+            Gets the asset name of a texture to load in the LoadContent method.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.ParticleTexture">
+            <summary>
+            Gets or sets the Texture2D used to display the Particles.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.Modifiers">
+            <summary>
+            Gets the collection of Modifiers which are acting upon the Emitter.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.BlendMode">
+            <summary>
+            The blending mode to be used by Renderers when rendering this Emitter.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.TriggerOffset">
+            <summary>
+            The Emitters trigger offset in relation to the ParticleEffect.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.MinimumTriggerPeriod">
+            <summary>
+            Defines the minimum amount of time between triggers for the Emitter, expressed in
+            whole and fractional seconds. Triggers which occur during this period will be ignored.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.Emitter.MostRecentTrigger">
+            <summary>
+            Stores the time at which the Emitter was most recently triggered.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.OnNameChanged(System.EventArgs)">
+            <summary>
+            Raises the NameChanged event.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.#ctor">
+            <summary>
+            Instantiates a new instance of the Emitter class.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.DeepCopy">
+            <summary>
+            Returns an unitialised deep copy of the Emitter.
+            </summary>
+            <returns>A deep copy of the Emitter.</returns>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.CopyBaseFields(ProjectMercury.Emitters.Emitter)">
+            <summary>
+            Copies the fields of the Emitter base class into the specified Emitter.
+            </summary>
+            <param name="emitter">The Emitter which will be copied into.</param>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.Initialise">
+            <summary>
+            Initialises the Emitter.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Term and/or Budget properties have not been set.</exception>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.Initialise(System.Int32,System.Single)">
+            <summary>
+            Initialises the Emitter.
+            </summary>
+            <param name="budget">The number of Particles which are available to the Emitter.</param>
+            <param name="term">The length of time that released Particles will remain active, in whole and fractional seconds.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the budget parameter is less than one, or if the term paramter
+            is not a positive value.</exception>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.Terminate">
+            <summary>
+            Terminates the emitter immediately.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.ForceNextTrigger">
+            <summary>
+            Forces the Emitter to execute its next trigger, even if it has a minimum trigger period and is
+            currently 'cooling down'.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.LoadContent(Microsoft.Xna.Framework.Content.ContentManager)">
+            <summary>
+            Loads resources required by the Emitter via a ContentManager.
+            </summary>
+            <param name="content">The ContentManager used to load resources.</param>
+            <exception cref="T:Microsoft.Xna.Framework.Content.ContentLoadException">Thrown if the asset defined
+            in the ParticleTextureAssetName property could not be loaded.</exception>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.RetireParticles(System.Int32)">
+            <summary>
+            Retires the specified number of Particles.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.RetireParticles(ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Retires the specified number of particles from the particle array.
+            </summary>
+            <param name="particleArray">A pointer to the first element in an array of particles.</param>
+            <param name="count">The number of particles to retire.</param>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.Update(System.Single)">
+            <summary>
+            Updates the Emitter and all Particles within.
+            </summary>
+            <param name="deltaSeconds">Elapsed frame time in whole and fractional seconds.</param>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.Trigger(Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+             Triggers the Emitter at the specified position...
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Emitter has not been initialised.</exception>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.Trigger(Microsoft.Xna.Framework.Vector2)">
+            <summary>
+             Triggers the Emitter at the specified position...
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if the Emitter has not been initialised.</exception>
+        </member>
+        <member name="M:ProjectMercury.Emitters.Emitter.GenerateOffsetAndForce(Microsoft.Xna.Framework.Vector2@,Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Generates an offset vector and force vector for a Particle when it is released.
+            </summary>
+            <param name="offset">The offset of the Particle from the trigger location.</param>
+            <param name="force">A unit vector defining the initial force of the Particle.</param>
+        </member>
+        <member name="P:ProjectMercury.Emitters.Emitter.Name">
+            <summary>
+            Gets or sets the name of the Emitter.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.Emitter.Initialised">
+            <summary>
+            True if the Emitter object has been initialised, else false.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.Emitter.Budget">
+            <summary>
+            Gets or sets the number of Particles which are available to the Emitter.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if trying to set this property after the Emitter has been initialised.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the specified value is less than 1.</exception>
+        </member>
+        <member name="P:ProjectMercury.Emitters.Emitter.Term">
+            <summary>
+            Gets or sets the length of time that released Particles will remain active, in whole and fractional seconds.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if trying to set this property after the Emitter has been initialised.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the supplied value is less than or equal to 0.</exception>
+        </member>
+        <member name="P:ProjectMercury.Emitters.Emitter.ReleaseQuantity">
+            <summary>
+            Gets or sets the number of Particles which will be released on each trigger.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the specified value is less than 1.</exception>
+        </member>
+        <member name="P:ProjectMercury.Emitters.Emitter.ActiveParticlesCount">
+            <summary>
+            Gets the number of Particles which are currently active.
+            </summary>
+        </member>
+        <member name="E:ProjectMercury.Emitters.Emitter.NameChanged">
+            <summary>
+            Raised when the name of the Emitter has been changed.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.VelocityClampModifier">
+            <summary>
+            Defines a Modifier which limits the velocity of Particles to a specified value.
+            </summary>
+            <remarks>For best results insert this Modifier after any other Modifiers which may alter
+            the velocity of the Particle.</remarks>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.VelocityClampModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.VelocityClampModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.VelocityClampModifier.MaximumVelocity">
+            <summary>
+            Gets or sets the maximum velocity of Particles..
+            </summary>
+            <value>The maximum velocity of Particles..</value>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.RotationRateModifier">
+            <summary>
+            Defines a modifier which changes the rotation rate of particles over their lifetime.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RotationRateModifier.InitialRate">
+            <summary>
+            Gets or sets the initial rotation rate in radians per second.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RotationRateModifier.FinalRate">
+            <summary>
+            Gets or sets the final rotation rate in radians per second.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RotationRateModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RotationRateModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particle">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.VariableFloat">
+            <summary>
+            Defines a floating point object which has a definable random variation.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.VariableFloat.Value">
+            <summary>
+            The base value for the VariableFloat.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.VariableFloat.Variation">
+            <summary>
+            The range of the random variation around the base value.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat.Sample">
+            <summary>
+            Samples the VariableFloat.
+            </summary>
+            <returns>A randomised float value.</returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat.Sample(ProjectMercury.Range)">
+            <summary>
+            Samples the VariableFloat, and clamps the result to be within the specified range.
+            </summary>
+            <param name="clampRange">The range of allowable values.</param>
+            <returns>A randomised float value.</returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat.op_Implicit(System.Single)~ProjectMercury.VariableFloat">
+            <summary>
+            Implicit cast operator from float to VariableFloat.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat.op_Implicit(ProjectMercury.VariableFloat)~System.Single">
+            <summary>
+            Implicit cast operation from VariableFloat to float.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">Another object to compare to.</param>
+            <returns>
+            true if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat.Equals(ProjectMercury.VariableFloat)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> representation of the object.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> representation of the object.
+            </returns>
+        </member>
+        <member name="T:ProjectMercury.Emitters.PolygonEmitter">
+            <summary>
+            Emits particles in the shape of a polygon defined with the Points property.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.PolygonEmitter.Close">
+            <summary>
+            Gets or sets a value indicating wether or not the polygon should be closed.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.PolygonEmitter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProjectMercury.Emitters.PolygonEmitter"/> class.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.PolygonEmitter.DeepCopy">
+            <summary>
+            Returns an unitialised deep copy of the Emitter.
+            </summary>
+            <returns>A deep copy of the Emitter.</returns>
+        </member>
+        <member name="M:ProjectMercury.Emitters.PolygonEmitter.GenerateOffsetAndForce(Microsoft.Xna.Framework.Vector2@,Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Generates an offset vector and force vector for a Particle when it is released.
+            </summary>
+            <param name="offset">The offset of the Particle from the trigger location.</param>
+            <param name="force">A unit vector defining the initial force of the Particle.</param>
+        </member>
+        <member name="P:ProjectMercury.Emitters.PolygonEmitter.Points">
+            <summary>
+            Polygon points.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.PolygonEmitter.Origin">
+            <summary>
+            Gets or sets the origin of the point collection.
+            </summary>
+            <value>The origin.</value>
+        </member>
+        <member name="P:ProjectMercury.Emitters.PolygonEmitter.Rotation">
+            <summary>
+            Polygon rotation.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.PolygonEmitter.Scale">
+            <summary>
+            Polygon scale.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Emitters.PolygonPointCollection">
+            <summary>
+            Collection of points to generate a polygon.
+            </summary>
+            <remarks>By implementing the IList interface explicitly, we can effectively override certain methods of the
+            base class without them being declared as virtual.</remarks>
+        </member>
+        <member name="F:ProjectMercury.Emitters.PolygonPointCollection.TranslationOffset">
+            <summary>
+            Gets or sets an offset vector for the shape.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.PolygonPointCollection.RecalculateTranslation">
+            <summary>
+            Recalculats the translation offset vector based on the origin type.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.PolygonPointCollection.Origin">
+            <summary>
+            Gets or sets the origin of the shape defined by the points in the collection.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Emitters.PolygonOrigin">
+            <summary>
+            Enumerates the origin options for a polygon shape.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.PolygonOrigin.Default">
+            <summary>
+            No origin is specified, the translation vector will not be set.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.PolygonOrigin.Center">
+            <summary>
+            The translation vector will be set to move the origin into the centre of the shape.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.PolygonOrigin.Origin">
+            <summary>
+            The translation vector will be set to move the origin to the first point in this shape.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Emitters.ConeEmitter">
+            <summary>
+            Defines an Emitter which releases particles in a beam which gradually becomes wider.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.ConeEmitter.CalculateConeExtents">
+            <summary>
+            Calculates the extents of the cone based on the direction and cone angle.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.ConeEmitter.DeepCopy">
+            <summary>
+            Returns an unitialised deep copy of the Emitter.
+            </summary>
+            <returns>A deep copy of the Emitter.</returns>
+        </member>
+        <member name="M:ProjectMercury.Emitters.ConeEmitter.GenerateOffsetAndForce(Microsoft.Xna.Framework.Vector2@,Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Generates an offset vector and force vector for a Particle when it is released.
+            </summary>
+            <param name="offset">The offset of the Particle from the trigger location.</param>
+            <param name="force">A unit vector defining the initial force of the Particle.</param>
+        </member>
+        <member name="P:ProjectMercury.Emitters.ConeEmitter.Direction">
+            <summary>
+            The angle (in radians) that the ConeEmitters beam is facing.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.ConeEmitter.ConeAngle">
+            <summary>
+            The angle (in radians) from edge to edge of the ConeEmitters beam.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the specified value is either
+            too small or too large.</exception>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.OpacityModifier">
+            <summary>
+            Defines a Modifier which gradually changes the opacity of a Particle over its lifetime.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.OpacityModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.OpacityModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityModifier.Initial">
+            <summary>
+            Gets or sets the initial opacity of Particles as they are released.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityModifier.Ultimate">
+            <summary>
+            Gets or sets the ultimate opacity of Particles as they are retired.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.LinearGravityModifier">
+            <summary>
+            Defines a Modifier that applies a constant force vector to Particles over their lifetime.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.LinearGravityModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.LinearGravityModifier.Gravity">
+            <summary>
+            Gets or sets the gravity vector.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.LinearGravityModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.DampingModifier">
+            <summary>
+            Defines a Modifier which applies a damping force to a Particle over its lifetime.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.DampingModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.DampingModifier.DampingCoefficient">
+            <summary>
+            The damping coefficient.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.DampingModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.Controllers.ControllerCollection">
+            <summary>
+            Defines a collection of controller objects.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Controllers.ControllerCollection.Add(ProjectMercury.Controllers.Controller)">
+            <summary>
+            Adds a controller to the collection.
+            </summary>
+            <param name="controller">The controller to add.</param>
+        </member>
+        <member name="M:ProjectMercury.Controllers.ControllerCollection.Remove(ProjectMercury.Controllers.Controller)">
+            <summary>
+            Removes a controller from the collection.
+            </summary>
+            <param name="controller">The controller to remove.</param>
+        </member>
+        <member name="P:ProjectMercury.Controllers.ControllerCollection.Owner">
+            <summary>
+            Gets or sets the particle effect which owns the collection.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ModifierCollection">
+            <summary>
+            Defines a collection of Modifiers.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ModifierCollection.DeepCopy">
+            <summary>
+            Returns a deep copy of the ModifierCollection.
+            </summary>
+            <returns>A deep copy of the ModifierCollection.</returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ModifierCollection.RunProcessors(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Causes all Modifiers in the collection to process the particles.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Range">
+            <summary>
+            Defines a range (or interval) of floating point values.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Range.#ctor(System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProjectMercury.Range"/> struct.
+            </summary>
+            <param name="minimum">The inclusive minimum value.</param>
+            <param name="maximum">The inclusive maximum value.</param>
+        </member>
+        <member name="F:ProjectMercury.Range.Minimum">
+            <summary>
+            Gets or sets the inclusive minimum value in the range.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Range.Maximum">
+            <summary>
+            Gets or sets the inclusive maximum value in the range.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Range.Contains(ProjectMercury.Range)">
+            <summary>
+            Returns true if the specified range is completely contained within this range.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Range.Contains(System.Single)">
+            <summary>
+            Returns true if the specified value falls within the range.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Range.Merge(ProjectMercury.Range)">
+            <summary>
+            Merges the specifed range into this range with a boolean union.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Range.Intersect(ProjectMercury.Range)">
+            <summary>
+            Intersects the specified range with this range with a boolean intersection.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Range.Subtract(ProjectMercury.Range)">
+            <summary>
+            Subtracts the specified range from this range with a boolean difference.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Range.Union(ProjectMercury.Range,ProjectMercury.Range)">
+            <summary>
+            Creates a new range which is the boolean union of two specified ranges.
+            </summary>
+            <param name="x">Input range.</param>
+            <param name="y">Input range.</param>
+        </member>
+        <member name="M:ProjectMercury.Range.Intersect(ProjectMercury.Range,ProjectMercury.Range)">
+            <summary>
+            Creates a new range which is the boolean intersection of two specified ranges.
+            </summary>
+            <param name="x">Input range.</param>
+            <param name="y">Input range.</param>
+        </member>
+        <member name="M:ProjectMercury.Range.Subtract(ProjectMercury.Range,ProjectMercury.Range)">
+            <summary>
+            Creates a new range which is the boolean difference between two specified ranges.
+            </summary>
+            <param name="x">Input range.</param>
+            <param name="y">Input range.</param>
+        </member>
+        <member name="M:ProjectMercury.Range.Parse(System.String)">
+            <summary>
+            Creates a new range by parsing an ISO 31-11 string representation of a closed interval.
+            </summary>
+            <param name="value">Input string value.</param>
+            <exception cref="T:System.FormatException">Thrown if the input string is not in a valid ISO 31-11 closed interval format.</exception>
+            <remarks>Example of a well formed ISO 31-11 closed interval: <i>"[0,1]"</i>. Open intervals are not supported.</remarks>
+        </member>
+        <member name="M:ProjectMercury.Range.Parse(System.String,System.IFormatProvider)">
+            <summary>
+            Creates a new range by parsing an ISO 31-11 string representation of a closed interval.
+            </summary>
+            <param name="value">Input stirng value.</param>
+            <param name="format">The format provider.</param>
+            <remarks>Example of a well formed ISO 31-11 closed interval: <i>"[0,1]"</i>. Open intervals are not supported.</remarks>
+        </member>
+        <member name="M:ProjectMercury.Range.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <returns>
+            	<c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.Range.Equals(ProjectMercury.Range)">
+            <summary>
+            Determines whether the specified <see cref="T:ProjectMercury.Range"/> is equal to this instance.
+            </summary>
+            <param name="value">The <see cref="T:ProjectMercury.Range"/> to compare with this instance.</param>
+            <returns>
+            	<c>true</c> if the specified <see cref="T:ProjectMercury.Range"/> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.Range.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.Range.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.Range.ToString(System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.Range.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="format">The format.</param>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.Range.op_Addition(ProjectMercury.Range,ProjectMercury.Range)">
+            <summary>
+            Implements the operator +.
+            </summary>
+            <param name="x">The lvalue.</param>
+            <param name="y">The rvalue.</param>
+            <returns>The boolean union of the lvalue and rvalue.</returns>
+        </member>
+        <member name="M:ProjectMercury.Range.op_Subtraction(ProjectMercury.Range,ProjectMercury.Range)">
+            <summary>
+            Implements the operator -.
+            </summary>
+            <param name="x">The lvalue.</param>
+            <param name="y">the rvalue.</param>
+            <returns>The boolean difference of the lvalue and rvalue.</returns>
+        </member>
+        <member name="M:ProjectMercury.Range.op_BitwiseOr(ProjectMercury.Range,ProjectMercury.Range)">
+            <summary>
+            Implements the operator |.
+            </summary>
+            <param name="x">The lvalue.</param>
+            <param name="y">The rvalue.</param>
+            <returns>The boolean intersection of the lvalue and rvalue.</returns>
+        </member>
+        <member name="M:ProjectMercury.Range.op_Equality(ProjectMercury.Range,ProjectMercury.Range)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="x">The lvalue.</param>
+            <param name="y">The rvalue.</param>
+            <returns>
+            	<c>true</c> if the lvalue <see cref="T:ProjectMercury.Range"/> is equal to the rvalue; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.Range.op_Inequality(ProjectMercury.Range,ProjectMercury.Range)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="x">The lvalue.</param>
+            <param name="y">The rvalue.</param>
+            <returns>
+            	<c>true</c> if the lvalue <see cref="T:ProjectMercury.Range"/> is not equal to the rvalue; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:ProjectMercury.Range.Size">
+            <summary>
+            Gets the size of the range.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.OpacityInterpolatorModifier">
+            <summary>
+            Defines a modifier which changes the opacity of particles based on a linear interpolation over three values.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.OpacityInterpolatorModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.OpacityInterpolatorModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityInterpolatorModifier.InitialOpacity">
+            <summary>
+            Gets or sets the initial opacity.
+            </summary>
+            <value>The initial opacity.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityInterpolatorModifier.MiddleOpacity">
+            <summary>
+            Gets or sets the middle opacity.
+            </summary>
+            <value>The middle opacity.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityInterpolatorModifier.MiddlePosition">
+            <summary>
+            Gets or sets the middle opacity position.
+            </summary>
+            <value>The middle position.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityInterpolatorModifier.FinalOpacity">
+            <summary>
+            Gets or sets the final opacity.
+            </summary>
+            <value>The final opacity.</value>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.RotationModifier">
+            <summary>
+            Defines a Modifier which alters the rotation of a Particle over its lifetime.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RotationModifier.RotationRate">
+            <summary>
+            The rate of rotation in radians per second.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RotationModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RotationModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.Emitters.MaskEmitter">
+            <summary>
+            Defines an Emitter which releases Particles based on a mask array, typically from an image.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.MaskEmitter.RecalculateMaskHits">
+            <summary>
+            Recalculates the points on the mask array which will be used as release points.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.MaskEmitter.ApplyMaskTexture(Microsoft.Xna.Framework.Graphics.Texture2D)">
+            <summary>
+            Applies a mask texture to the MaskEmitter.
+            </summary>
+            <param name="maskTexture">A texture reference representing the mask.</param>
+            <remarks>This method will also change the Width and Height properties to match the dimensions
+            of the mask texture.</remarks>
+        </member>
+        <member name="M:ProjectMercury.Emitters.MaskEmitter.LoadContent(Microsoft.Xna.Framework.Content.ContentManager)">
+            <summary>
+            Loads resources required by the Emitter via a ContentManager.
+            </summary>
+            <param name="content">The ContentManager used to load resources.</param>
+            <exception cref="T:Microsoft.Xna.Framework.Content.ContentLoadException">Thrown if the asset defined
+            in the ParticleTextureAssetName property could not be loaded.</exception>
+        </member>
+        <member name="M:ProjectMercury.Emitters.MaskEmitter.DeepCopy">
+            <summary>
+            Returns an unitialised deep copy of the Emitter.
+            </summary>
+            <returns>A deep copy of the Emitter.</returns>
+        </member>
+        <member name="M:ProjectMercury.Emitters.MaskEmitter.GenerateOffsetAndForce(Microsoft.Xna.Framework.Vector2@,Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Generates an offset vector and force vector for a Particle when it is released.
+            </summary>
+            <param name="offset">The offset of the Particle from the trigger location.</param>
+            <param name="force">A unit vector defining the initial force of the Particle.</param>
+        </member>
+        <member name="P:ProjectMercury.Emitters.MaskEmitter.Mask">
+            <summary>
+            Gets or sets the mask array.
+            </summary>
+            <value>The mask array.</value>
+        </member>
+        <member name="P:ProjectMercury.Emitters.MaskEmitter.Threshold">
+            <summary>
+            Gets or sets the threshold value above which samples in the mask will be used as release points.
+            </summary>
+            <value>The threshold value.</value>
+        </member>
+        <member name="P:ProjectMercury.Emitters.MaskEmitter.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:ProjectMercury.Emitters.MaskEmitter.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:ProjectMercury.Emitters.MaskEmitter.MaskTextureContentPath">
+            <summary>
+            Gets or sets the content path to the mask texture.
+            </summary>
+            <value>The mask texture content path.</value>
+        </member>
+        <member name="T:ProjectMercury.Emitters.CircleEmitter">
+            <summary>
+            Defines an Emitter which releases Particles in a circle or ring shape.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.CircleEmitter.Ring">
+            <summary>
+            True if particles should be spawned only on the edge of the circle, else false.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.CircleEmitter.Radiate">
+            <summary>
+            True if particles should radiate away from the center of the circle, else false.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.CircleEmitter.DeepCopy">
+            <summary>
+            Returns an unitialised deep copy of the Emitter.
+            </summary>
+            <returns>A deep copy of the Emitter.</returns>
+        </member>
+        <member name="M:ProjectMercury.Emitters.CircleEmitter.GenerateOffsetAndForce(Microsoft.Xna.Framework.Vector2@,Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Generates an offset vector and force vector for a Particle when it is released.
+            </summary>
+            <param name="offset">The offset of the Particle from the trigger location.</param>
+            <param name="force">A unit vector defining the initial force of the Particle.</param>
+        </member>
+        <member name="P:ProjectMercury.Emitters.CircleEmitter.Radius">
+            <summary>
+            Defines the radius of the circle.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffectManager.#ctor(ProjectMercury.Renderers.Renderer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProjectMercury.ParticleEffectManager"/> class.
+            </summary>
+            <param name="renderer">The renderer which will be used to render particles.</param>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffectManager.Update(System.Single,System.Boolean)">
+            <summary>
+            Updates all the particle effects which are managed by the manager.
+            </summary>
+            <param name="deltaSeconds">The elapsed time in whole and fractional seconds.</param>
+            <param name="multithreaded">True to update particle effects asynchronously.</param>
+        </member>
+        <member name="M:ProjectMercury.ParticleEffectManager.Draw">
+            <summary>
+            Draws each particle effect.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.ParticleEffectManager.Renderer">
+            <summary>
+            Gets or sets the renderer which is used to render the particle effects.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.ParticleEffectManager.ActiveParticlesCount">
+            <summary>
+            Gets the number of active particles in each particle effect.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ColourMergeModifier">
+            <summary>
+            Defines a Modifier which merges the colour of particles towards a single colour over their lifetime. Works best
+            when Particles are being released with random colours, where you require the particles to have a uniform colour
+            at the end of their lifetime.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ColourMergeModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.ColourMergeModifier.MergeColour">
+            <summary>
+            The final colour of Particles when they are retired.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ColourMergeModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="elapsedSeconds">Elapsed time in whole and fractional seconds.</param>
+            <param name="particle">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.Controllers.TimelineEvent">
+            <summary>
+            A single event on the timeline.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Controllers.TimelineEvent.TimeOffset">
+            <summary>
+            The time offset of the event in whole and fractional seconds.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Controllers.TimelineEvent.EmitterName">
+            <summary>
+            The name of the emitter to trigger at the specified time offset.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Controllers.TimelineEvent.TriggerPosition">
+            <summary>
+            The position of the trigger.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Controllers.TimelineController">
+            <summary>
+            Defines a simple controller which triggers emitters based on a timeline.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Controllers.TimelineController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProjectMercury.Controllers.TimelineController"/> class.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Controllers.TimelineController.Trigger(Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Called by the particle effect when it is triggered.
+            </summary>
+            <param name="position">The desired position of the trigger.</param>
+            <remarks>This method should not be called directly, the ParticleEffect class
+            will defer control to this method when the controller is assigned.</remarks>
+        </member>
+        <member name="M:ProjectMercury.Controllers.TimelineController.Update(System.Single)">
+            <summary>
+            Called by the particle effect when it is updated.
+            </summary>
+            <param name="deltaSeconds">Elapsed time in whole and fractional seconds.</param>
+            <remarks>This method should not be called directly, the ParticleEffect class
+            will defer control to this method when the controller is assigned.</remarks>
+        </member>
+        <member name="P:ProjectMercury.Controllers.TimelineController.TotalSeconds">
+            <summary>
+            Counts the total seconds.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Controllers.TimelineController.Timeline">
+            <summary>
+            Gets the timeline for a single trigger.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Controllers.TimelineController.EventQueue">
+            <summary>
+            Gets or sets the queue of timeline events which are due to be processed.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Particle">
+            <summary>
+            Defines the data structure for a particle.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Particle.Position">
+            <summary>
+            Gets or sets the position of the particle.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Particle.Scale">
+            <summary>
+            Gets or sets the scale of the particle.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Particle.Rotation">
+            <summary>
+            Gets or sets the rotation of the particle in radians.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Particle.Colour">
+            <summary>
+            Gets or sets the colour of the particle. The W component is opacity.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Particle.Momentum">
+            <summary>
+             Gets or sets the current momentum of the particle.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Particle.Velocity">
+            <summary>
+            Gets or sets the sum of the forces which are currently acting on the particle.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Particle.Inception">
+            <summary>
+            Gets or sets the time at which the particle was released.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Particle.Age">
+            <summary>
+            Gets or sets the age of the particle in the range 0-1.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Particle.ApplyForce(Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Applies a force to the particle.
+            </summary>
+            <param name="force">A vector describing the force and direction.</param>
+        </member>
+        <member name="M:ProjectMercury.Particle.Rotate(System.Single)">
+            <summary>
+            Applies a rotation to the Particle.
+            </summary>
+            <param name="radians">The angle to rotate in radians.</param>
+        </member>
+        <member name="M:ProjectMercury.Particle.Update(System.Single)">
+            <summary>
+            Updates the particle.
+            </summary>
+            <param name="deltaSeconds">Elapsed seconds since the last update.</param>
+            <remarks>This method has been manually inlined in the Emitter base class Update method,
+            its implementation has been left here for reference &amp; clarity.</remarks>
+        </member>
+        <member name="T:ProjectMercury.Emitters.RectEmitter">
+            <summary>
+            Defines an Emitter which releases particles in a rectangle shape.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.RectEmitter.Frame">
+            <summary>
+            True if the Particles should be released only from the edge of the rectangle, else false.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.RectEmitter.DeepCopy">
+            <summary>
+            Returns an unitialised deep copy of the Emitter.
+            </summary>
+            <returns>A deep copy of the Emitter.</returns>
+        </member>
+        <member name="M:ProjectMercury.Emitters.RectEmitter.GenerateOffsetAndForce(Microsoft.Xna.Framework.Vector2@,Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Generates an offset vector and force vector for a Particle when it is released.
+            </summary>
+            <param name="offset">The offset of the Particle from the trigger location.</param>
+            <param name="force">A unit vector defining the initial force of the Particle.</param>
+        </member>
+        <member name="P:ProjectMercury.Emitters.RectEmitter.Width">
+            <summary>
+            Gets or sets the width of the rectangle.
+            </summary>
+            <value>The width of the rectangle.</value>
+        </member>
+        <member name="P:ProjectMercury.Emitters.RectEmitter.Height">
+            <summary>
+            Gets or sets the height of the rectangle..
+            </summary>
+            <value>The height of the rectangle.</value>
+        </member>
+        <member name="P:ProjectMercury.Emitters.RectEmitter.Rotation">
+            <summary>
+            Gets or sets the rotation of the rectangle.
+            </summary>
+            <value>The rotation of the rectangle measured in radians.</value>
+        </member>
+        <member name="T:ProjectMercury.Emitters.LineEmitter">
+            <summary>
+            Defines an Emitter which releases Particles at a random point along a line.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.LineEmitter.Rectilinear">
+            <summary>
+            If true, will emit particles perpendicular to the angle of the line.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.LineEmitter.EmitBothWays">
+            <summary>
+            If true, will emit particles both ways. Only work when Rectilinear is enabled.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.LineEmitter.DeepCopy">
+            <summary>
+            Returns an unitialised deep copy of the Emitter.
+            </summary>
+            <returns>A deep copy of the Emitter.</returns>
+        </member>
+        <member name="M:ProjectMercury.Emitters.LineEmitter.GenerateOffsetAndForce(Microsoft.Xna.Framework.Vector2@,Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Generates an offset vector and force vector for a Particle when it is released.
+            </summary>
+            <param name="offset">The offset of the Particle from the trigger location.</param>
+            <param name="force">A unit vector defining the initial force of the Particle.</param>
+        </member>
+        <member name="P:ProjectMercury.Emitters.LineEmitter.Length">
+            <summary>
+            Gets or sets the length of the line.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.LineEmitter.Angle">
+            <summary>
+            Gets or sets the rotation of the line around its middle point.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.OpacityOscillator">
+            <summary>
+            Defines a Modifier which adjusts the opacity of Particles based on a sine wave.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.OpacityOscillator.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.OpacityOscillator.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityOscillator.Frequency">
+            <summary>
+            Gets or sets the oscillator frequency (the number of cycles per second).
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityOscillator.MinimumOpacity">
+            <summary>
+            Gets or sets the minimum opacity (the opacity of Particles at the negetive peak of the sine wave).
+            </summary>
+            <value>The minimum opacity.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.OpacityOscillator.MaximumOpacity">
+            <summary>
+            Gets or sets the maximum opacity (the opacity of Particles at the positive peak of the sine wave).
+            </summary>
+            <value>The maximum opacity.</value>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ScaleInterpolatorModifier">
+            <summary>
+            Defines a modifier which changes the scale of particles based on a linear interpolation over three values.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ScaleInterpolatorModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ScaleInterpolatorModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ScaleInterpolatorModifier.InitialScale">
+            <summary>
+            Gets or sets the initial scale.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ScaleInterpolatorModifier.MiddleScale">
+            <summary>
+            Gets or sets the middle scale.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ScaleInterpolatorModifier.MiddlePosition">
+            <summary>
+            Gets or sets the middle scale position.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ScaleInterpolatorModifier.FinalScale">
+            <summary>
+            Gets or sets the final scale.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.RadialForceModifier">
+            <summary>
+            Defines a Modifier which applies a force to a Particle when it enters a circular area.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RadialForceModifier.Position">
+            <summary>
+            Gets or sets the position of the force.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RadialForceModifier.Force">
+            <summary>
+            Gets or sets the force vector.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RadialForceModifier.Strength">
+            <summary>
+            Gets or sets the strength of the force.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RadialForceModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RadialForceModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RadialForceModifier.Radius">
+            <summary>
+            Gets or sets the radius of the force.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the specified value is negetive or zero</exception>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ScaleModifier">
+            <summary>
+            Defines a Modifier which adjusts the scale of a Particle over its lifetime.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.ScaleModifier.InitialScale">
+            <summary>
+            The initial scale of the Particle in pixels.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.ScaleModifier.UltimateScale">
+            <summary>
+            The ultimate scale of the Particle in pixels.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ScaleModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ScaleModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particle">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.RectangleForceModifier">
+            <summary>
+            Defines a Modifier which applies a force to a Particle when it enters a rectangular area.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RectangleForceModifier.Position">
+            <summary>
+            Gets or sets the position of the centre of the rectangular force area.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RectangleForceModifier.Force">
+            <summary>
+            Gets or sets the force vector.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.RectangleForceModifier.Strength">
+            <summary>
+            Gets or sets the strength of the force.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RectangleForceModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.RectangleForceModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleForceModifier.Width">
+            <summary>
+            Gets or sets the width of the rectangular force area.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleForceModifier.Height">
+            <summary>
+            Gets or sets the height of the rectangular force area.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleForceModifier.Left">
+            <summary>
+            Gets the position of the left edge of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleForceModifier.Right">
+            <summary>
+            Gets the position of the right edge of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleForceModifier.Top">
+            <summary>
+            Gets the position of the top edge of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.RectangleForceModifier.Bottom">
+            <summary>
+            Gets the position of the bottom edge of the rectangle.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.OpacityFastFadeModifier">
+            <summary>
+            Defines a modifier which fades the opacity of particles from one to zero. This is faster than using
+            an OpacityModifier to achieve the same result, but you cannot alter the opacity levels.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.OpacityFastFadeModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.OpacityFastFadeModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.Calculator">
+            <summary>
+            Encapsulates common mathematical functions.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Calculator.Pi">
+            <summary>
+            Represents the value of pi.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Calculator.TwoPi">
+            <summary>
+            Represents the value of pi times two.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Calculator.PiOver2">
+            <summary>
+            Represents the value of pi divided by two.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Calculator.PiOver4">
+            <summary>
+            Represents the value of pi divided by four.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Clamp(System.Single,System.Single,System.Single)">
+            <summary>
+            Restricts a value to be within a specified range.
+            </summary>
+            <param name="value">The value to clamp.</param>
+            <param name="min">The minimum value. If value is less than min, min will be returned.</param>
+            <param name="max">The maximum value. If value is greater than max, max will be returned.</param>
+            <returns>The clamped value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Clamp(System.Single,ProjectMercury.Range)">
+            <summary>
+            Restricts a value to be within the specified range.
+            </summary>
+            <param name="value">The value to clamp.</param>
+            <param name="range">The range of allowable values.</param>
+            <returns>The clamped value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Clamp(System.Single@,System.Single,System.Single)">
+            <summary>
+            Restricts a value to be within a specified range.
+            </summary>
+            <param name="value">The value to clamp.</param>
+            <param name="min">The minimum value. If value is less than min, value will be assigned min.</param>
+            <param name="max">The maximum value. If value is greater than max, value will be assigned max.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Clamp(System.Single@,ProjectMercury.Range)">
+            <summary>
+            Restricts a value to be within a specified range.
+            </summary>
+            <param name="value">The value to clamp.</param>
+            <param name="range">The range of allowable values.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Clamp``1(``0,``0,``0)">
+            <summary>
+            Restricts a value to be within a specified range.
+            </summary>
+            <param name="value">The value to clamp.</param>
+            <param name="min">The minimum value. If value is less than min, min will be returned.</param>
+            <param name="max">The maximum value. If value is greater than max, max will be returned.</param>
+            <returns>The clamped value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Wrap(System.Single,System.Single,System.Single)">
+            <summary>
+            Wraps the specified value to be within the specified range.
+            </summary>
+            <param name="value">The value to wrap.</param>
+            <param name="min">The minimum value.</param>
+            <param name="max">The maximum value.</param>
+            <returns>The wrapped value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Wrap(System.Single,ProjectMercury.Range)">
+            <summary>
+            Wraps the specified value to be within the specified range.
+            </summary>
+            <param name="value">The value to wrap.</param>
+            <param name="range">The range of allowable values.</param>
+            <returns>The wrapped value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Wrap(System.Single@,System.Single,System.Single)">
+            <summary>
+            Wraps the specified value to be within the specified range.
+            </summary>
+            <param name="value">The value to wrap.</param>
+            <param name="min">The minimum value.</param>
+            <param name="max">The maximum value.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Wrap(System.Single@,ProjectMercury.Range)">
+            <summary>
+            Wraps the specified value to be within the specified range.
+            </summary>
+            <param name="value">The value to wrap.</param>
+            <param name="range">The allowable range of values.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.LinearInterpolate(System.Single,System.Single,System.Single)">
+            <summary>
+            Linearly interpolates between two values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="amount">Value between 0 and 1 indicating the weight of value2.</param>
+            <returns>Interpolated value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.LinearInterpolate(System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            Linearly interpolates between two values.
+            </summary>
+            <param name="value">The output value.</param>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="amount">Value between 0 and 1 indicating the weight of value2.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.LinearInterpolate(System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Linearly interpolates between three values, where the position of the middle value is variable.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="value2Position">The position of the second source value between 0 and 1.</param>
+            <param name="value3">Source value.</param>
+            <param name="amount">Value between 0 and 1 indicating the position in the curve to evaluate.</param>
+            <returns>Interpolated value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.CubicInterpolate(System.Single,System.Single,System.Single)">
+            <summary>
+            Interpolates between two values using a cubic equation.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="amount">Weighting value.</param>
+            <returns>Interpolated value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.CubicInterpolate(System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            Interpolates between two values using a cubic equation.
+            </summary>
+            <param name="value">The output value.</param>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="amount">Weighting value.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Max(System.Single,System.Single)">
+            <summary>
+            Returns the greater of two values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <returns>The greater value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Max(System.Single,System.Single,System.Single)">
+            <summary>
+            Returns the greater of three values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="value3">Source value.</param>
+            <returns>The greater value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Max(System.Single@,System.Single,System.Single)">
+            <summary>
+            Sets value to be the greater of two values.
+            </summary>
+            <param name="value">The output value.</param>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Max(System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            Sets value to the the greater of three values.
+            </summary>
+            <param name="value">The output value.</param>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="value3">Source value.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Max``1(``0,``0)">
+            <summary>
+            Returns the greater of two values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <returns>The greater value, or value1 if the values are equal.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Max``1(``0,``0,``0)">
+            <summary>
+            Returns the greater of three values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="value3">Source value.</param>
+            <returns>The greater value, or value1 if the values are equal.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Min(System.Single,System.Single)">
+            <summary>
+            Returns the lesser of two values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <returns>The lesser value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Min(System.Single,System.Single,System.Single)">
+            <summary>
+            Returns the lesser of three values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="value3">Source value.</param>
+            <returns>The lesser value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Min(System.Single@,System.Single,System.Single)">
+            <summary>
+            Sets value to be the lesser of two values.
+            </summary>
+            <param name="value">The output value.</param>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Min(System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            Sets value to be the lesser of three values.
+            </summary>
+            <param name="value">The output value.</param>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="value3">Source value.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Min``1(``0,``0)">
+            <summary>
+            Returns the lesser of two values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <returns>The lesser value, or value1 if the values are equal.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Min``1(``0,``0,``0)">
+            <summary>
+            Returns the lesser of three values.
+            </summary>
+            <param name="value1">Source value.</param>
+            <param name="value2">Source value.</param>
+            <param name="value3">Source value.</param>
+            <returns>The lesser value, or value1 if the values are equal.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Abs(System.Single)">
+            <summary>
+            Returns the absolute value of a single precision floating point number.
+            </summary>
+            <param name="value">Source value.</param>
+            <returns>The absolute vaue of the source value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Abs(System.Single@)">
+            <summary>
+            Assigns the absolute value of a single precision floating point number.
+            </summary>
+            <param name="value">Source value.</param>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Acos(System.Single)">
+            <summary>
+            Returns the angle whose cosine is the specified value.
+            </summary>
+            <param name="value">A number representing a cosine.</param>
+            <returns>The angle whose cosine is the specified value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Asin(System.Single)">
+            <summary>
+            Returns the angle whose sine is the specified value.
+            </summary>
+            <param name="value">A number representing a sine.</param>
+            <returns>The angle whose sine is the specified value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Atan(System.Single)">
+            <summary>
+            Returns the angle whos tangent is the speicified number.
+            </summary>
+            <param name="value">A number representing a tangent.</param>
+            <returns>The angle whos tangent is the speicified number.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Atan2(System.Single,System.Single)">
+            <summary>
+            Returns the angle whose tangent is the quotient of the two specified numbers.
+            </summary>
+            <param name="y">The y coordinate of a point.</param>
+            <param name="x">The x coordinate of a point.</param>
+            <returns>The angle whose tangent is the quotient of the two specified numbers.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Sin(System.Single)">
+            <summary>
+            Returns the sine of the specified angle.
+            </summary>
+            <param name="value">An angle specified in radians.</param>
+            <returns>The sine of the specified angle.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Sinh(System.Single)">
+            <summary>
+            Returns the hyperbolic sine of the specified angle.
+            </summary>
+            <param name="value">An angle specified in radians.</param>
+            <returns>The hyperbolic sine of the specified angle.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Cos(System.Single)">
+            <summary>
+            Returns the cosine of the specified angle.
+            </summary>
+            <param name="value">An angle specified in radians.</param>
+            <returns>The cosine of the specified angle.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Cosh(System.Single)">
+            <summary>
+            Returns the hyperbolic cosine of the specified angle.
+            </summary>
+            <param name="value">An angle specified in radians.</param>
+            <returns>The hyperbolic cosine of the specified angle.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Tan(System.Single)">
+            <summary>
+            Returns the tangent of the specified angle.
+            </summary>
+            <param name="value">An angle specified in radians.</param>
+            <returns>The tangent of the specified angle.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Tanh(System.Single)">
+            <summary>
+            Returns the hyperbolic tangent of the specified angle.
+            </summary>
+            <param name="value">An angle specified in radians.</param>
+            <returns>The hyperbolic tangent of the specified angle.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Log(System.Single)">
+            <summary>
+            Returns the natural (base e) logarithm of the specified value.
+            </summary>
+            <param name="value">A number whose logarithm is to be found.</param>
+            <returns>The natural (base e) logarithm of the specified value.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Pow(System.Single,System.Single)">
+            <summary>
+            Returns the specified value raised to the specified power.
+            </summary>
+            <param name="value">Source value.</param>
+            <param name="power">A single precision floating point number that specifies a power.</param>
+            <returns>The specified value raised to the specified power.</returns>
+        </member>
+        <member name="M:ProjectMercury.Calculator.Sqrt(System.Single)">
+            <summary>
+            Returns the square root of the specified value.
+            </summary>
+            <param name="value">Source value.</param>
+            <returns>The square root of the specified value.</returns>
+        </member>
+        <member name="T:ProjectMercury.BoundingRect">
+            <summary>
+            Defines a a bounding rectangle (similar to an XNA BoundingBox but in two dimensions).
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.BoundingRect.Min">
+            <summary>
+            Gets or sets the minimum point in the rectangle.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.BoundingRect.Max">
+            <summary>
+            Gets or sets the maximum point in the rectangle.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.BoundingRect.ToBoundingBox(System.Single,System.Single)">
+            <summary>
+            Gets a 3 dimensional bounding box for the rectangle.
+            </summary>
+            <param name="z">The minimum position of the rectangle on the z axis.</param>
+            <param name="depth">The required depth of the bounding box.</param>
+            <returns>A bounding box containing the bounding rect, with the specified Z axis position and depth.</returns>
+        </member>
+        <member name="P:ProjectMercury.BoundingRect.Top">
+            <summary>
+            Gets the top of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.BoundingRect.Left">
+            <summary>
+            Gets the left position of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.BoundingRect.Right">
+            <summary>
+            Gets the right position of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.BoundingRect.Bottom">
+            <summary>
+            Gets the bottom position of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.BoundingRect.Width">
+            <summary>
+            Gets the width of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.BoundingRect.Height">
+            <summary>
+            Gets the height of the rectangle.
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.BoundingRect.Centre">
+            <summary>
+            Gets the centre point of the rectangle.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.PlatformModifier">
+            <summary>
+            Defines a Modifier which freezes a particle when it comes into contact with a bounding box.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.PlatformModifier.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProjectMercury.Modifiers.PlatformModifier"/> class.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.PlatformModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.PlatformModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.PlatformModifier.Platforms">
+            <summary>
+            The list of platforms.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Emitters.TextureEmitter">
+            <summary>
+            Obsolete.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.TextureEmitter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ProjectMercury.Emitters.TextureEmitter"/> class.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Emitters.TextureEmitter.Threshold">
+            <summary>
+            Gets or sets the threshold over which pixels will trigger the release of particles.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.TextureEmitter.CalculateEmissionPoints">
+            <summary>
+            Calculates the emission points.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.TextureEmitter.DeepCopy">
+            <summary>
+            Returns an uninitialised deep copy of the Emitter.
+            </summary>
+            <returns>A deep copy of the Emitter.</returns>
+        </member>
+        <member name="M:ProjectMercury.Emitters.TextureEmitter.GenerateOffsetAndForce(Microsoft.Xna.Framework.Vector2@,Microsoft.Xna.Framework.Vector2@)">
+            <summary>
+            Generates an offset vector and force vector for a Particle when it is released.
+            </summary>
+            <param name="offset">The offset of the Particle from the trigger location.</param>
+            <param name="force">A unit vector defining the initial force of the Particle.</param>
+        </member>
+        <member name="P:ProjectMercury.Emitters.TextureEmitter.Scale">
+            <summary>
+            Gets or sets the scale factor of the texture (in screen space).
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Emitters.TextureEmitter.Texture">
+            <summary>
+            Gets or sets the texture used to lookup particle release offsets.
+            </summary>
+            <value>The texture.</value>
+        </member>
+        <member name="P:ProjectMercury.Emitters.TextureEmitter.ApplyPixelColours">
+            <summary>
+            Gets or sets a value indicating whether particles should assume the colour of the underlying
+            pixel in the texture
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Emitters.EmitterCompatibilityExtensions">
+            <summary>
+            Contains extension methods for the Emitter class which aid backwards compatibility
+            with previous releases of the engine.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Emitters.EmitterCompatibilityExtensions.Initialize(ProjectMercury.Emitters.Emitter)">
+            <summary>
+            Initializes the Emitter.
+            </summary>
+            <remarks>The 'Initialize' method was renamed to 'Initialise' in revision 49307 (21st April 2009).</remarks>
+        </member>
+        <member name="M:ProjectMercury.Emitters.EmitterCompatibilityExtensions.Update(ProjectMercury.Emitters.Emitter,System.Single,System.Single)">
+            <summary>
+            Updates the Emitter.
+            </summary>
+            <param name="emitter">The extended instance.</param>
+            <param name="totalSeconds">Total game time in whole and fractional seconds.</param>
+            <param name="deltaSeconds">Elapsed game time in whole and fractional seconds.</param>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.TrajectoryRotationModifier">
+            <summary>
+            Defines a Modifier which adjusts the rotation of a Particle to follow its trajectory.
+            </summary>
+            <remarks>Ideally this modifier should be added *after* any other physics modifiers.</remarks>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.TrajectoryRotationModifier.RotationOffset">
+            <summary>
+            The rotation offset to add to the calculated trajectory rotation.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.TrajectoryRotationModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.TrajectoryRotationModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particle">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ForceInterpolatorModifier">
+            <summary>
+            Defines a modifier which changes the Force of particles based on a linear interpolation over three values.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ForceInterpolatorModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ForceInterpolatorModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ForceInterpolatorModifier.InitialForce">
+            <summary>
+            Gets or sets the initial force vector.
+            </summary>
+            <value>The initial force vector.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ForceInterpolatorModifier.MiddleForce">
+            <summary>
+            Gets or sets the middle force vector.
+            </summary>
+            <value>The middle force vector.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ForceInterpolatorModifier.MiddlePosition">
+            <summary>
+            Gets or sets the middle force position.
+            </summary>
+            <value>The middle position.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ForceInterpolatorModifier.FinalForce">
+            <summary>
+            Gets or sets the final force vector.
+            </summary>
+            <value>The final force vector.</value>
+        </member>
+        <member name="T:ProjectMercury.Guard">
+            <summary>
+            Defines helper methods for validating arguments passed into methods.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Guard.ArgumentNull(System.String,System.Object)">
+            <summary>
+            Performs a check against an argument, and throws a ArgumentNullException if it is null.
+            </summary>
+            <param name="parameter">The name of the method parameter.</param>
+            <param name="argument">The value being passed as an argument.</param>
+        </member>
+        <member name="M:ProjectMercury.Guard.ArgumentNullOrEmpty(System.String,System.String)">
+            <summary>
+            Performs a check against a string argument, and throws an ArgumentNullException if it is
+            null or empty.
+            </summary>
+            <param name="parameter">The name of the method parameter.</param>
+            <param name="argument">The value being passed as an argument.</param>
+        </member>
+        <member name="M:ProjectMercury.Guard.ArgumentLessThan``1(System.String,``0,``0)">
+            <summary>
+            Performs a check against a method argument, and throws an ArgumentOutOfRangeException if it is
+            less than the specified threshold.
+            </summary>
+            <typeparam name="T">The type of argument being checked.</typeparam>
+            <param name="parameter">The name of the method parameter.</param>
+            <param name="argument">The value being passed as an argument.</param>
+            <param name="threshold">The threshold value that the argument must be equal to or greater than
+            to pass the test.</param>
+        </member>
+        <member name="M:ProjectMercury.Guard.ArgumentGreaterThan``1(System.String,``0,``0)">
+            <summary>
+            Performs a check against a method argument, and throws an ArgumentOutOfRangeException if it is
+            greater than the specified threshold.
+            </summary>
+            <typeparam name="T">The type of argument being checked.</typeparam>
+            <param name="parameter">The name of the method parameter.</param>
+            <param name="argument">The value being passed as an argument.</param>
+            <param name="threshold">The threshold value that the argument must be equal to or less than
+            to pass the test.</param>
+        </member>
+        <member name="M:ProjectMercury.Guard.ArgumentOutOfRange``1(System.String,``0,``0,``0)">
+            <summary>
+            Performs a check against a method argument, and throws an ArgumentOutOfRangeException if it is
+            greater than the specified maximum value, or less than the specified minimum value.
+            </summary>
+            <typeparam name="T">The type of argument being checked.</typeparam>
+            <param name="parameter">The name of the method parameter.</param>
+            <param name="argument">The value being passed as an argument.</param>
+            <param name="min">The minimum allowed value (inclusive).</param>
+            <param name="max">The maximum allowed value (inclusive).</param>
+        </member>
+        <member name="M:ProjectMercury.Guard.ArgumentNotFinite(System.String,System.Single)">
+            <summary>
+            Performs a check against a method argument, and throws a NotFiniteNumberException if it is not a
+            finite number eg NaN, PositiveInfinity or NegetiveInfinity.
+            </summary>
+            <param name="parameter">The name of the method parameter.</param>
+            <param name="argument">The value being passed as an argument.</param>
+        </member>
+        <member name="M:ProjectMercury.Guard.IsTrue(System.Boolean,System.String)">
+            <summary>
+            Throws an InvalidOperationException if the specified expression evaluates to true.
+            </summary>
+            <param name="expression">The expression to evaluate.</param>
+            <param name="message">The error message.</param>
+        </member>
+        <member name="M:ProjectMercury.Guard.IsFalse(System.Boolean,System.String)">
+            <summary>
+            Throws an InvalidOperationException if the specified expression evaluates to false.
+            </summary>
+            <param name="expression">The expression to evaluate.</param>
+            <param name="message">The error message.</param>
+        </member>
+        <member name="T:ProjectMercury.VariableFloat3">
+            <summary>
+            Defines a Vector3 object which has a definable random variation.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.VariableFloat3.Value">
+            <summary>
+            The base value of the VariableFloat3.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.VariableFloat3.Variation">
+            <summary>
+            The range of the random variation around the base value.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat3.Sample">
+            <summary>
+            Samples the VariableFloat3.
+            </summary>
+            <returns>A randomised Vector3 value.</returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat3.op_Implicit(Microsoft.Xna.Framework.Vector3)~ProjectMercury.VariableFloat3">
+            <summary>
+            Performs an implicit conversion from <see cref="T:Microsoft.Xna.Framework.Vector3"/> to <see cref="T:ProjectMercury.VariableFloat3"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat3.op_Implicit(ProjectMercury.VariableFloat3)~Microsoft.Xna.Framework.Vector3">
+            <summary>
+            Performs an implicit conversion from <see cref="T:ProjectMercury.VariableFloat3"/> to <see cref="T:Microsoft.Xna.Framework.Vector3"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat3.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">Another object to compare to.</param>
+            <returns>
+            true if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat3.Equals(ProjectMercury.VariableFloat3)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat3.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+        </member>
+        <member name="M:ProjectMercury.VariableFloat3.ToString">
+            <summary>
+            Returns the fully qualified type name of this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> containing a fully qualified type name.
+            </returns>
+        </member>
+        <member name="T:ProjectMercury.Renderers.SpriteBatchRenderer">
+            <summary>
+            Defines a Renderer which uses the standard XNA SpriteBatch class to render Particles.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.SpriteBatchRenderer.Dispose(System.Boolean)">
+            <summary>
+            Disposes any unmanaged resources being used by the Renderer.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.SpriteBatchRenderer.LoadContent(Microsoft.Xna.Framework.Content.ContentManager)">
+            <summary>
+            Loads any content required by the renderer.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if the GraphicsDeviceManager has not been set.</exception>
+        </member>
+        <member name="M:ProjectMercury.Renderers.SpriteBatchRenderer.RenderEmitter(ProjectMercury.Emitters.Emitter,Microsoft.Xna.Framework.Matrix@)">
+            <summary>
+            Renders the specified Emitter, applying the specified transformation offset.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.SpriteBatchRenderer.RenderEffect(ProjectMercury.ParticleEffect,Microsoft.Xna.Framework.Graphics.SpriteBatch)">
+            <summary>
+            Renders the specified ParticleEffect.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.SpriteBatchRenderer.RenderEmitter(ProjectMercury.Emitters.Emitter,Microsoft.Xna.Framework.Graphics.SpriteBatch)">
+            <summary>
+            Renders the specified Emitter.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Renderers.SpriteBatchRenderer.GetBlendState(ProjectMercury.Emitters.EmitterBlendMode)">
+            <summary>
+            Gets the BlendState object corresponding to the specified EmitterBlendMode value.
+            </summary>
+            <param name="emitterBlendMode">The EmitterBlendMode value.</param>
+            <returns>A BlendState object.</returns>
+        </member>
+        <member name="P:ProjectMercury.Renderers.SpriteBatchRenderer.NonPremultipliedAdditive">
+            <summary>
+            A BlendState for non premultiplied additive blending.
+            </summary>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ScaleOscillator">
+            <summary>
+            Defines a Modifier which adjusts the scale of Particles based on a sine wave.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ScaleOscillator.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ScaleOscillator.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ScaleOscillator.Frequency">
+            <summary>
+            Gets or sets the oscillator frequency (the number of cycles per second).
+            </summary>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ScaleOscillator.MinimumScale">
+            <summary>
+            Gets or sets the minimum scale (the scale of Particles at the negetive peak of the sine wave).
+            </summary>
+            <value>The minimum scale.</value>
+        </member>
+        <member name="P:ProjectMercury.Modifiers.ScaleOscillator.MaximumScale">
+            <summary>
+            Gets or sets the maximum scale (the scale of Particles at the positive peak of the sine wave).
+            </summary>
+            <value>The maximum scale.</value>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.ColourModifier">
+            <summary>
+            Defines a Modifier which gradually changes the colour of a Particle over the course of its lifetime.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ColourModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.ColourModifier.InitialColour">
+            <summary>
+            The initial colour of Particles when they are released.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.ColourModifier.UltimateColour">
+            <summary>
+            The ultimate colour of Particles when they are retired.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.ColourModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="elapsedSeconds">Elapsed time in whole and fractional seconds.</param>
+            <param name="particle">A pointer to the first item in an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+        <member name="T:ProjectMercury.Modifiers.HueShiftModifier">
+            <summary>
+            Defines a Modifier which adjusts the hue of a Particles colour over time.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.HueShiftModifier.YIQTransformMatrix">
+            <summary>
+            The transformation matrices which convert from RGB to YIQ and back.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.HueShiftModifier.RGBTransformMatrix">
+            <summary>
+            The transformation matrices which convert from RGB to YIQ and back.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.HueShiftModifier.#cctor">
+            <summary>
+            Initializes the <see cref="T:ProjectMercury.Modifiers.HueShiftModifier"/> class.
+            </summary>
+        </member>
+        <member name="F:ProjectMercury.Modifiers.HueShiftModifier.HueShift">
+            <summary>
+            The amount to adjust the hue in degrees per second.
+            </summary>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.HueShiftModifier.DeepCopy">
+            <summary>
+            Returns a deep copy of the Modifier implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjectMercury.Modifiers.HueShiftModifier.Process(System.Single,ProjectMercury.Particle*,System.Int32)">
+            <summary>
+            Processes the particles.
+            </summary>
+            <param name="dt">Elapsed time in whole and fractional seconds.</param>
+            <param name="particleArray">A pointer to an array of particles.</param>
+            <param name="count">The number of particles which need to be processed.</param>
+        </member>
+    </members>
+</doc>

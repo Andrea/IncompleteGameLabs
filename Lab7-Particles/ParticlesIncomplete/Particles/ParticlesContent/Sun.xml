@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent>
+  <Asset Type="ProjectMercury.ParticleEffect">
+    <Item>
+      <Name>Basic Emitter</Name>
+      <Budget>5000</Budget>
+      <Term>2</Term>
+      <ReleaseQuantity>20</ReleaseQuantity>
+      <Enabled>True</Enabled>
+      <ReleaseSpeed>
+        <Value>150</Value>
+        <Variation>25</Variation>
+      </ReleaseSpeed>
+      <ReleaseColour>
+        <Value>0 0 1</Value>
+        <Variation>0 0 0</Variation>
+      </ReleaseColour>
+      <ReleaseOpacity>
+        <Value>1</Value>
+        <Variation>0</Variation>
+      </ReleaseOpacity>
+      <ReleaseScale>
+        <Value>50</Value>
+        <Variation>1</Variation>
+      </ReleaseScale>
+      <ReleaseRotation>
+        <Value>0</Value>
+        <Variation>1</Variation>
+      </ReleaseRotation>
+      <ReleaseImpulse>0 0</ReleaseImpulse>
+      <ParticleTextureAssetName>TriangleParticle</ParticleTextureAssetName>
+      <Modifiers>
+        <Item Type="ProjectMercury.Modifiers.RotationModifier">
+          <RotationRate>1.57079637</RotationRate>
+        </Item>
+        <Item Type="ProjectMercury.Modifiers.OpacityFastFadeModifier" />
+        <Item Type="ProjectMercury.Modifiers.ColourModifier">
+          <InitialColour>0.7529412 0 0</InitialColour>
+          <UltimateColour>1 0.5019608 1</UltimateColour>
+        </Item>
+        <Item Type="ProjectMercury.Modifiers.DampingModifier">
+          <DampingCoefficient>0.99</DampingCoefficient>
+        </Item>
+      </Modifiers>
+      <BlendMode>Add</BlendMode>
+      <TriggerOffset>0 0</TriggerOffset>
+      <MinimumTriggerPeriod>0</MinimumTriggerPeriod>
+    </Item>
+    <Name>Particle Effect</Name>
+    <Author />
+    <Description />
+  </Asset>
+</XnaContent>

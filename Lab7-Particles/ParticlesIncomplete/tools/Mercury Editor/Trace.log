@@ -1,0 +1,1076 @@
+﻿APP: Mercury Particle Engine EffectEditor
+    Date: 16/04/2012 13:44:21
+    Version: 1.0.0.0
+    Culture: en-IE
+    Path: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug
+CORE: Program core initialising...
+CORE: Composing IOC container...
+CORE: Found plugin assemblies...
+    Assembly: E:\DEVELOPMENT\GAMES\XNA\MERCURYPARTICLEENGINE\TRUNK\PROJECTMERCURY.EFFECTEDITOR\BIN\DEBUG\PLUGINS\PROJECTMERCURY.CONTENTPIPELINE.DLL
+    Assembly: E:\DEVELOPMENT\GAMES\XNA\MERCURYPARTICLEENGINE\TRUNK\PROJECTMERCURY.EFFECTEDITOR\BIN\DEBUG\PLUGINS\PROJECTMERCURY.EFFECTEDITOR.DEFAULTPLUGINLIBRARY.DLL
+CORE: Found exported parts...
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleMergeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.SerializationPlugins.Mercury3FormatImporter
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEffectSerializationPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleOscillatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.HueShiftModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.VelocityClampModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityFastFadeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Modifiers.RectangleForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RotationModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.PolygonEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.ConeEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.CircleEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.TrajectoryRotationModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.SerializationPlugins.DefaultEffectSerializationPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEffectSerializationPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Modifiers.RadialForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.MaskEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.SineForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ForceInterpolatorModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.LineEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RectangleConstraintDeflectorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.DampingModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourMergeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityOscillatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.LinearGravityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RadialGravityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.RectEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.EmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RotationRateModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RandomForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+CORE: Found 7 emitter plugins...
+    Plugin: Polygon Emitter
+    Plugin: Cone Emitter
+    Plugin: Circle Emitter
+    Plugin: Mask Emitter
+    Plugin: Line Emitter
+    Plugin: Rect Emitter
+    Plugin: Basic Emitter
+CORE: Found 25 modifier plugins...
+    Plugin: Scale Merge Modifier
+    Plugin: Colour Modifier
+    Plugin: Scale Oscillator
+    Plugin: Hue Shift Modifier
+    Plugin: Velocity Clamp Modifier
+    Plugin: Opacity Fast Fader
+    Plugin: Rectangle Force Modifier
+    Plugin: Opacity Modifier
+    Plugin: Rotation Modifier
+    Plugin: Trajectory Rotation Modifier
+    Plugin: Scale Modifier
+    Plugin: Radial Force Modifier
+    Plugin: Sine Force Modifier
+    Plugin: Force Interpolator
+    Plugin: Rectangle Constraint Deflector
+    Plugin: Damping Modifier
+    Plugin: Colour Merge Modifier
+    Plugin: Opacity Oscillator
+    Plugin: Linear Gravity Modifier
+    Plugin: Radial Gravity Modifier
+    Plugin: Colour Interpolator
+    Plugin: Opacity Interpolator
+    Plugin: Scale Interpolator
+    Plugin: Rotation Rate Modifier
+    Plugin: Random Force Modifier
+CORE: Found 2 serialization plugins...
+    Plugin: Mercury 3 Format Importer
+    Plugin: Default Effect Serializer
+CORE: InterfaceProvider loaded: ProjectMercury.EffectEditor.UserInterface, ProjectMercury.EffectEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+UI: UserInterface reporting ready...
+CORE: User interface ready...
+CORE: Instantiating particle renderer...
+CORE: Loading default particle texture...
+CORE: Instantiating default particle effect...
+CORE: Loading default texture references...
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Beam.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\BeamBlurred.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Cloud001.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Cloud002.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Cloud003.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Cloud004.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Flame.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\FlowerBurst.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Laser.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\LensFlare.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\MultiDot.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Particle001.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Particle002.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Particle003.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Particle004.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Particle005.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Particle006.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Particle007.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Ring001.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Ring002.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\SoftClumpy.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\SoftSmokey.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Spikey001.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Spikey002.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Splash.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Spray001.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Star.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Water001.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Water002.png
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\Weeds.png
+UI: Adding menu item for 'Basic Emitter' plugin...
+UI: Adding menu item for 'Circle Emitter' plugin...
+UI: Adding menu item for 'Cone Emitter' plugin...
+UI: Adding menu item for 'Line Emitter' plugin...
+UI: Adding menu item for 'Mask Emitter' plugin...
+UI: Adding menu item for 'Polygon Emitter' plugin...
+UI: Adding menu item for 'Rect Emitter' plugin...
+UI: Adding menu item for 'Colour Interpolator' plugin...
+UI: Adding menu item for 'Colour Merge Modifier' plugin...
+UI: Adding menu item for 'Colour Modifier' plugin...
+UI: Adding menu item for 'Damping Modifier' plugin...
+UI: Adding menu item for 'Force Interpolator' plugin...
+UI: Adding menu item for 'Hue Shift Modifier' plugin...
+UI: Adding menu item for 'Linear Gravity Modifier' plugin...
+UI: Adding menu item for 'Opacity Fast Fader' plugin...
+UI: Adding menu item for 'Opacity Interpolator' plugin...
+UI: Adding menu item for 'Opacity Modifier' plugin...
+UI: Adding menu item for 'Opacity Oscillator' plugin...
+UI: Adding menu item for 'Radial Force Modifier' plugin...
+UI: Adding menu item for 'Radial Gravity Modifier' plugin...
+UI: Adding menu item for 'Random Force Modifier' plugin...
+UI: Adding menu item for 'Rectangle Constraint Deflector' plugin...
+UI: Adding menu item for 'Rectangle Force Modifier' plugin...
+UI: Adding menu item for 'Rotation Modifier' plugin...
+UI: Adding menu item for 'Rotation Rate Modifier' plugin...
+UI: Adding menu item for 'Scale Interpolator' plugin...
+UI: Adding menu item for 'Scale Merge Modifier' plugin...
+UI: Adding menu item for 'Scale Modifier' plugin...
+UI: Adding menu item for 'Scale Oscillator' plugin...
+UI: Adding menu item for 'Sine Force Modifier' plugin...
+UI: Adding menu item for 'Trajectory Rotation Modifier' plugin...
+UI: Adding menu item for 'Velocity Clamp Modifier' plugin...
+UI: Adding menu item for 'Mercury 3 Format Importer' plugin...
+UI: Adding menu item for 'Default Effect Serializer' plugin...
+UI: Searching for library particle effects...
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\BasicExplosion.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\BasicFireball.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\BasicSmokePlume.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\BeamMeUp.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\CampFire.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\FlowerBloom.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\MagicTrail.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\Paparazzi.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\SimpleRain.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\StarTrail.xml
+    File: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\WaterJet.xml
+UI: User requires removing an emitter...
+    Emitter: Basic Emitter
+CORE: Removing emitter...
+UI: User requires adding an emitter...
+CORE: Adding emitter...
+    Using plugin: Cone Emitter
+CORE: Adding new texture reference...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Emitter01
+    Texture: D:\labs\Particles\Particles\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires adding a modifier...
+    Emitter: Emitter01
+CORE: Adding modifier...
+    Using plugin: Opacity Fast Fader
+UI: User requires adding a modifier...
+    Emitter: Emitter01
+CORE: Adding modifier...
+    Using plugin: Colour Modifier
+UI: User requires adding a modifier...
+    Emitter: Emitter01
+CORE: Adding modifier...
+    Using plugin: Scale Interpolator
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Thruster.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Thruster.xml
+    Using plugin: Default Effect Serializer
+UI: User requires adding a modifier...
+    Emitter: Emitter01
+CORE: Adding modifier...
+    Using plugin: Trajectory Rotation Modifier
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Thruster.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Thruster.xml
+    Using plugin: Default Effect Serializer
+UI: User requires new particle effect...
+CORE: Instantiating default particle effect...
+UI: User requires deserialize of particle effect...
+    Filepath:E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\BasicExplosion.xml
+CORE: Deserializing particle effect from E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\EffectLibrary\BasicExplosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires new particle effect...
+CORE: Instantiating default particle effect...
+UI: User requires assigning texture reference to emitter...
+    Emitter: Basic Emitter
+    Texture: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\LensFlare.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Basic Emitter
+    Texture: D:\labs\Particles\Particles\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires adding a modifier...
+    Emitter: Basic Emitter
+CORE: Adding modifier...
+    Using plugin: Trajectory Rotation Modifier
+UI: User requires adding an emitter...
+CORE: Adding emitter...
+    Using plugin: Circle Emitter
+UI: User requires assigning texture reference to emitter...
+    Emitter: Emitter08
+    Texture: D:\labs\Particles\Particles\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires adding a modifier...
+    Emitter: Emitter08
+CORE: Adding modifier...
+    Using plugin: Trajectory Rotation Modifier
+UI: User requires adding a modifier...
+    Emitter: Emitter08
+CORE: Adding modifier...
+    Using plugin: Opacity Fast Fader
+User requires removing a modifier...
+CORE: Removing modifier...
+UI: User requires adding a modifier...
+    Emitter: Basic Emitter
+CORE: Adding modifier...
+    Using plugin: Opacity Fast Fader
+UI: User requires adding a modifier...
+    Emitter: Emitter08
+CORE: Adding modifier...
+    Using plugin: Rotation Modifier
+UI: User requires adding a modifier...
+    Emitter: Emitter08
+CORE: Adding modifier...
+    Using plugin: Colour Modifier
+UI: User requires adding an emitter...
+CORE: Adding emitter...
+    Using plugin: Basic Emitter
+UI: User requires assigning texture reference to emitter...
+    Emitter: Emitter09
+    Texture: E:\Development\Games\XNA\MercuryParticleEngine\Trunk\ProjectMercury.EffectEditor\bin\Debug\Textures\LensFlare.png
+UI: User requires adding a modifier...
+    Emitter: Emitter09
+CORE: Adding modifier...
+    Using plugin: Opacity Fast Fader
+UI: User requires reinitialising emitter...
+    Budget: 10
+    Term: 0.3
+CORE: Reinitialising emitter...
+UI: User requires reinitialising emitter...
+    Budget: 1000
+    Term: 0.7
+CORE: Reinitialising emitter...
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:D:\labs\Particles\Particles\Particles\ParticlesContent\Triangles.xml
+CORE: Deserializing particle effect from D:\labs\Particles\Particles\Particles\ParticlesContent\Triangles.xml
+    Using plugin: Default Effect Serializer
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Triangles.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Triangles.xml
+    Using plugin: Default Effect Serializer
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Triangles.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Triangles.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+CORE: Deserializing particle effect from D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires reinitialising emitter...
+    Budget: 10
+    Term: 0.9
+CORE: Reinitialising emitter...
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires reinitialising emitter...
+    Budget: 100
+    Term: 0.9
+CORE: Reinitialising emitter...
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:D:\labs\Particles\Particles\Particles\ParticlesContent\Triangles.xml
+CORE: Deserializing particle effect from D:\labs\Particles\Particles\Particles\ParticlesContent\Triangles.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+CORE: Deserializing particle effect from D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires serialize of particle effect...
+    Filepath: D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+CORE: Serializing particle effect to D:\labs\Particles\Particles\Particles\ParticlesContent\Explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:D:\labs\Particles\Particles\Particles\ParticlesContent\Sun.xml
+CORE: Deserializing particle effect from D:\labs\Particles\Particles\Particles\ParticlesContent\Sun.xml
+    Using plugin: Default Effect Serializer
+CORE: Disposing program core...
+CORE: Disposing program core...
+APP: Mercury Particle Engine EffectEditor
+    Date: 16/04/2012 16:23:02
+    Version: 1.0.0.0
+    Culture: en-IE
+    Path: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor
+CORE: Program core initialising...
+CORE: Composing IOC container...
+CORE: Found plugin assemblies...
+    Assembly: D:\LABS\PARTICLES\PARTICLES_INCOMPLETE\TOOLS\MERCURY EDITOR\PLUGINS\PROJECTMERCURY.CONTENTPIPELINE.DLL
+    Assembly: D:\LABS\PARTICLES\PARTICLES_INCOMPLETE\TOOLS\MERCURY EDITOR\PLUGINS\PROJECTMERCURY.EFFECTEDITOR.DEFAULTPLUGINLIBRARY.DLL
+CORE: Found exported parts...
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleMergeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.SerializationPlugins.Mercury3FormatImporter
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEffectSerializationPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleOscillatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.HueShiftModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.VelocityClampModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityFastFadeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Modifiers.RectangleForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RotationModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.PolygonEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.ConeEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.CircleEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.TrajectoryRotationModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.SerializationPlugins.DefaultEffectSerializationPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEffectSerializationPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Modifiers.RadialForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.MaskEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.SineForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ForceInterpolatorModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.LineEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RectangleConstraintDeflectorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.DampingModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourMergeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityOscillatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.LinearGravityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RadialGravityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.RectEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.EmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RotationRateModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RandomForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+CORE: Found 7 emitter plugins...
+    Plugin: Polygon Emitter
+    Plugin: Cone Emitter
+    Plugin: Circle Emitter
+    Plugin: Mask Emitter
+    Plugin: Line Emitter
+    Plugin: Rect Emitter
+    Plugin: Basic Emitter
+CORE: Found 25 modifier plugins...
+    Plugin: Scale Merge Modifier
+    Plugin: Colour Modifier
+    Plugin: Scale Oscillator
+    Plugin: Hue Shift Modifier
+    Plugin: Velocity Clamp Modifier
+    Plugin: Opacity Fast Fader
+    Plugin: Rectangle Force Modifier
+    Plugin: Opacity Modifier
+    Plugin: Rotation Modifier
+    Plugin: Trajectory Rotation Modifier
+    Plugin: Scale Modifier
+    Plugin: Radial Force Modifier
+    Plugin: Sine Force Modifier
+    Plugin: Force Interpolator
+    Plugin: Rectangle Constraint Deflector
+    Plugin: Damping Modifier
+    Plugin: Colour Merge Modifier
+    Plugin: Opacity Oscillator
+    Plugin: Linear Gravity Modifier
+    Plugin: Radial Gravity Modifier
+    Plugin: Colour Interpolator
+    Plugin: Opacity Interpolator
+    Plugin: Scale Interpolator
+    Plugin: Rotation Rate Modifier
+    Plugin: Random Force Modifier
+CORE: Found 2 serialization plugins...
+    Plugin: Mercury 3 Format Importer
+    Plugin: Default Effect Serializer
+CORE: InterfaceProvider loaded: ProjectMercury.EffectEditor.UserInterface, ProjectMercury.EffectEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+UI: UserInterface reporting ready...
+CORE: User interface ready...
+CORE: Instantiating particle renderer...
+CORE: Loading default particle texture...
+CORE: Instantiating default particle effect...
+CORE: Loading default texture references...
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Beam.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\BeamBlurred.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Cloud001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Cloud002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Cloud003.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Cloud004.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Flame.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\FlowerBurst.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Laser.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\LensFlare.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\MultiDot.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle003.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle004.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle005.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle006.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle007.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Ring001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Ring002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\SoftClumpy.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\SoftSmokey.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Spikey001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Spikey002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Splash.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Spray001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Star.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Water001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Water002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Weeds.png
+UI: Adding menu item for 'Basic Emitter' plugin...
+UI: Adding menu item for 'Circle Emitter' plugin...
+UI: Adding menu item for 'Cone Emitter' plugin...
+UI: Adding menu item for 'Line Emitter' plugin...
+UI: Adding menu item for 'Mask Emitter' plugin...
+UI: Adding menu item for 'Polygon Emitter' plugin...
+UI: Adding menu item for 'Rect Emitter' plugin...
+UI: Adding menu item for 'Colour Interpolator' plugin...
+UI: Adding menu item for 'Colour Merge Modifier' plugin...
+UI: Adding menu item for 'Colour Modifier' plugin...
+UI: Adding menu item for 'Damping Modifier' plugin...
+UI: Adding menu item for 'Force Interpolator' plugin...
+UI: Adding menu item for 'Hue Shift Modifier' plugin...
+UI: Adding menu item for 'Linear Gravity Modifier' plugin...
+UI: Adding menu item for 'Opacity Fast Fader' plugin...
+UI: Adding menu item for 'Opacity Interpolator' plugin...
+UI: Adding menu item for 'Opacity Modifier' plugin...
+UI: Adding menu item for 'Opacity Oscillator' plugin...
+UI: Adding menu item for 'Radial Force Modifier' plugin...
+UI: Adding menu item for 'Radial Gravity Modifier' plugin...
+UI: Adding menu item for 'Random Force Modifier' plugin...
+UI: Adding menu item for 'Rectangle Constraint Deflector' plugin...
+UI: Adding menu item for 'Rectangle Force Modifier' plugin...
+UI: Adding menu item for 'Rotation Modifier' plugin...
+UI: Adding menu item for 'Rotation Rate Modifier' plugin...
+UI: Adding menu item for 'Scale Interpolator' plugin...
+UI: Adding menu item for 'Scale Merge Modifier' plugin...
+UI: Adding menu item for 'Scale Modifier' plugin...
+UI: Adding menu item for 'Scale Oscillator' plugin...
+UI: Adding menu item for 'Sine Force Modifier' plugin...
+UI: Adding menu item for 'Trajectory Rotation Modifier' plugin...
+UI: Adding menu item for 'Velocity Clamp Modifier' plugin...
+UI: Adding menu item for 'Mercury 3 Format Importer' plugin...
+UI: Adding menu item for 'Default Effect Serializer' plugin...
+UI: Searching for library particle effects...
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BasicFireball.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BasicSmokePlume.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BeamMeUp.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\CampFire.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\FlowerBloom.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\MagicTrail.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\Paparazzi.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\SimpleRain.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\StarTrail.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\WaterJet.xml
+UI: User requires deserialize of particle effect...
+    Filepath:D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BasicFireball.xml
+CORE: Deserializing particle effect from D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BasicFireball.xml
+    Using plugin: Default Effect Serializer
+CORE: Disposing program core...
+CORE: Disposing program core...
+APP: Mercury Particle Engine EffectEditor
+    Date: 16/04/2012 16:26:31
+    Version: 1.0.0.0
+    Culture: en-IE
+    Path: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor
+CORE: Program core initialising...
+CORE: Composing IOC container...
+CORE: Found plugin assemblies...
+    Assembly: D:\LABS\PARTICLES\PARTICLES_INCOMPLETE\TOOLS\MERCURY EDITOR\PLUGINS\PROJECTMERCURY.CONTENTPIPELINE.DLL
+    Assembly: D:\LABS\PARTICLES\PARTICLES_INCOMPLETE\TOOLS\MERCURY EDITOR\PLUGINS\PROJECTMERCURY.EFFECTEDITOR.DEFAULTPLUGINLIBRARY.DLL
+CORE: Found exported parts...
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleMergeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.SerializationPlugins.Mercury3FormatImporter
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEffectSerializationPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleOscillatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.HueShiftModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.VelocityClampModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityFastFadeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Modifiers.RectangleForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RotationModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.PolygonEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.ConeEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.CircleEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.TrajectoryRotationModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.SerializationPlugins.DefaultEffectSerializationPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEffectSerializationPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Modifiers.RadialForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.MaskEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.SineForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ForceInterpolatorModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.LineEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RectangleConstraintDeflectorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.DampingModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourMergeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityOscillatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.LinearGravityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RadialGravityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.RectEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.EmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RotationRateModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RandomForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+CORE: Found 7 emitter plugins...
+    Plugin: Polygon Emitter
+    Plugin: Cone Emitter
+    Plugin: Circle Emitter
+    Plugin: Mask Emitter
+    Plugin: Line Emitter
+    Plugin: Rect Emitter
+    Plugin: Basic Emitter
+CORE: Found 25 modifier plugins...
+    Plugin: Scale Merge Modifier
+    Plugin: Colour Modifier
+    Plugin: Scale Oscillator
+    Plugin: Hue Shift Modifier
+    Plugin: Velocity Clamp Modifier
+    Plugin: Opacity Fast Fader
+    Plugin: Rectangle Force Modifier
+    Plugin: Opacity Modifier
+    Plugin: Rotation Modifier
+    Plugin: Trajectory Rotation Modifier
+    Plugin: Scale Modifier
+    Plugin: Radial Force Modifier
+    Plugin: Sine Force Modifier
+    Plugin: Force Interpolator
+    Plugin: Rectangle Constraint Deflector
+    Plugin: Damping Modifier
+    Plugin: Colour Merge Modifier
+    Plugin: Opacity Oscillator
+    Plugin: Linear Gravity Modifier
+    Plugin: Radial Gravity Modifier
+    Plugin: Colour Interpolator
+    Plugin: Opacity Interpolator
+    Plugin: Scale Interpolator
+    Plugin: Rotation Rate Modifier
+    Plugin: Random Force Modifier
+CORE: Found 2 serialization plugins...
+    Plugin: Mercury 3 Format Importer
+    Plugin: Default Effect Serializer
+CORE: InterfaceProvider loaded: ProjectMercury.EffectEditor.UserInterface, ProjectMercury.EffectEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+UI: UserInterface reporting ready...
+CORE: User interface ready...
+CORE: Instantiating particle renderer...
+CORE: Loading default particle texture...
+CORE: Instantiating default particle effect...
+CORE: Loading default texture references...
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Beam.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\BeamBlurred.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Cloud001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Cloud002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Cloud003.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Cloud004.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Flame.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\FlowerBurst.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Laser.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\LensFlare.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\MultiDot.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle003.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle004.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle005.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle006.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Particle007.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Ring001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Ring002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\SoftClumpy.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\SoftSmokey.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Spikey001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Spikey002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Splash.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Spray001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Star.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Water001.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Water002.png
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\Textures\Weeds.png
+UI: Adding menu item for 'Basic Emitter' plugin...
+UI: Adding menu item for 'Circle Emitter' plugin...
+UI: Adding menu item for 'Cone Emitter' plugin...
+UI: Adding menu item for 'Line Emitter' plugin...
+UI: Adding menu item for 'Mask Emitter' plugin...
+UI: Adding menu item for 'Polygon Emitter' plugin...
+UI: Adding menu item for 'Rect Emitter' plugin...
+UI: Adding menu item for 'Colour Interpolator' plugin...
+UI: Adding menu item for 'Colour Merge Modifier' plugin...
+UI: Adding menu item for 'Colour Modifier' plugin...
+UI: Adding menu item for 'Damping Modifier' plugin...
+UI: Adding menu item for 'Force Interpolator' plugin...
+UI: Adding menu item for 'Hue Shift Modifier' plugin...
+UI: Adding menu item for 'Linear Gravity Modifier' plugin...
+UI: Adding menu item for 'Opacity Fast Fader' plugin...
+UI: Adding menu item for 'Opacity Interpolator' plugin...
+UI: Adding menu item for 'Opacity Modifier' plugin...
+UI: Adding menu item for 'Opacity Oscillator' plugin...
+UI: Adding menu item for 'Radial Force Modifier' plugin...
+UI: Adding menu item for 'Radial Gravity Modifier' plugin...
+UI: Adding menu item for 'Random Force Modifier' plugin...
+UI: Adding menu item for 'Rectangle Constraint Deflector' plugin...
+UI: Adding menu item for 'Rectangle Force Modifier' plugin...
+UI: Adding menu item for 'Rotation Modifier' plugin...
+UI: Adding menu item for 'Rotation Rate Modifier' plugin...
+UI: Adding menu item for 'Scale Interpolator' plugin...
+UI: Adding menu item for 'Scale Merge Modifier' plugin...
+UI: Adding menu item for 'Scale Modifier' plugin...
+UI: Adding menu item for 'Scale Oscillator' plugin...
+UI: Adding menu item for 'Sine Force Modifier' plugin...
+UI: Adding menu item for 'Trajectory Rotation Modifier' plugin...
+UI: Adding menu item for 'Velocity Clamp Modifier' plugin...
+UI: Adding menu item for 'Mercury 3 Format Importer' plugin...
+UI: Adding menu item for 'Default Effect Serializer' plugin...
+UI: Searching for library particle effects...
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BasicFireball.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BasicSmokePlume.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\BeamMeUp.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\CampFire.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\FlowerBloom.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\MagicTrail.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\Paparazzi.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\SimpleRain.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\StarTrail.xml
+    File: D:\labs\Particles\Particles_incomplete\tools\Mercury Editor\EffectLibrary\WaterJet.xml
+CORE: Disposing program core...
+CORE: Disposing program core...
+APP: Mercury Particle Engine EffectEditor
+    Date: 25/04/2012 13:41:59
+    Version: 1.0.0.0
+    Culture: en-IE
+    Path: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor
+CORE: Program core initialising...
+CORE: Composing IOC container...
+CORE: Found plugin assemblies...
+    Assembly: C:\SOURCE\PARTICLES\PARTICLESINCOMPLETE\TOOLS\MERCURY EDITOR\PLUGINS\PROJECTMERCURY.CONTENTPIPELINE.DLL
+    Assembly: C:\SOURCE\PARTICLES\PARTICLESINCOMPLETE\TOOLS\MERCURY EDITOR\PLUGINS\PROJECTMERCURY.EFFECTEDITOR.DEFAULTPLUGINLIBRARY.DLL
+CORE: Found exported parts...
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleMergeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.SerializationPlugins.Mercury3FormatImporter
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEffectSerializationPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleOscillatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.HueShiftModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.VelocityClampModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityFastFadeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Modifiers.RectangleForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RotationModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.PolygonEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.ConeEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.CircleEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.TrajectoryRotationModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.SerializationPlugins.DefaultEffectSerializationPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEffectSerializationPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Modifiers.RadialForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.MaskEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.SineForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ForceInterpolatorModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.LineEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RectangleConstraintDeflectorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.DampingModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourMergeModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityOscillatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.LinearGravityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RadialGravityModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ColourInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.RectEmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.OpacityInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.Emitterplugins.EmitterPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IEmitterPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.ScaleInterpolatorPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RotationRateModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+    Part:ProjectMercury.EffectEditor.DefaultPluginLibrary.ModifierPlugins.RandomForceModifierPlugin
+        Implementing: ProjectMercury.EffectEditor.PluginInterfaces.IModifierPlugin
+CORE: Found 7 emitter plugins...
+    Plugin: Polygon Emitter
+    Plugin: Cone Emitter
+    Plugin: Circle Emitter
+    Plugin: Mask Emitter
+    Plugin: Line Emitter
+    Plugin: Rect Emitter
+    Plugin: Basic Emitter
+CORE: Found 25 modifier plugins...
+    Plugin: Scale Merge Modifier
+    Plugin: Colour Modifier
+    Plugin: Scale Oscillator
+    Plugin: Hue Shift Modifier
+    Plugin: Velocity Clamp Modifier
+    Plugin: Opacity Fast Fader
+    Plugin: Rectangle Force Modifier
+    Plugin: Opacity Modifier
+    Plugin: Rotation Modifier
+    Plugin: Trajectory Rotation Modifier
+    Plugin: Scale Modifier
+    Plugin: Radial Force Modifier
+    Plugin: Sine Force Modifier
+    Plugin: Force Interpolator
+    Plugin: Rectangle Constraint Deflector
+    Plugin: Damping Modifier
+    Plugin: Colour Merge Modifier
+    Plugin: Opacity Oscillator
+    Plugin: Linear Gravity Modifier
+    Plugin: Radial Gravity Modifier
+    Plugin: Colour Interpolator
+    Plugin: Opacity Interpolator
+    Plugin: Scale Interpolator
+    Plugin: Rotation Rate Modifier
+    Plugin: Random Force Modifier
+CORE: Found 2 serialization plugins...
+    Plugin: Mercury 3 Format Importer
+    Plugin: Default Effect Serializer
+CORE: InterfaceProvider loaded: ProjectMercury.EffectEditor.UserInterface, ProjectMercury.EffectEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+UI: UserInterface reporting ready...
+CORE: User interface ready...
+CORE: Instantiating particle renderer...
+CORE: Loading default particle texture...
+CORE: Instantiating default particle effect...
+CORE: Loading default texture references...
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Beam.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\BeamBlurred.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Cloud001.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Cloud002.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Cloud003.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Cloud004.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Flame.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\FlowerBurst.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Laser.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\LensFlare.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\MultiDot.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Particle001.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Particle002.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Particle003.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Particle004.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Particle005.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Particle006.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Particle007.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Ring001.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Ring002.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\SoftClumpy.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\SoftSmokey.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Spikey001.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Spikey002.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Splash.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Spray001.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Star.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Water001.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Water002.png
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Weeds.png
+UI: Adding menu item for 'Basic Emitter' plugin...
+UI: Adding menu item for 'Circle Emitter' plugin...
+UI: Adding menu item for 'Cone Emitter' plugin...
+UI: Adding menu item for 'Line Emitter' plugin...
+UI: Adding menu item for 'Mask Emitter' plugin...
+UI: Adding menu item for 'Polygon Emitter' plugin...
+UI: Adding menu item for 'Rect Emitter' plugin...
+UI: Adding menu item for 'Colour Interpolator' plugin...
+UI: Adding menu item for 'Colour Merge Modifier' plugin...
+UI: Adding menu item for 'Colour Modifier' plugin...
+UI: Adding menu item for 'Damping Modifier' plugin...
+UI: Adding menu item for 'Force Interpolator' plugin...
+UI: Adding menu item for 'Hue Shift Modifier' plugin...
+UI: Adding menu item for 'Linear Gravity Modifier' plugin...
+UI: Adding menu item for 'Opacity Fast Fader' plugin...
+UI: Adding menu item for 'Opacity Interpolator' plugin...
+UI: Adding menu item for 'Opacity Modifier' plugin...
+UI: Adding menu item for 'Opacity Oscillator' plugin...
+UI: Adding menu item for 'Radial Force Modifier' plugin...
+UI: Adding menu item for 'Radial Gravity Modifier' plugin...
+UI: Adding menu item for 'Random Force Modifier' plugin...
+UI: Adding menu item for 'Rectangle Constraint Deflector' plugin...
+UI: Adding menu item for 'Rectangle Force Modifier' plugin...
+UI: Adding menu item for 'Rotation Modifier' plugin...
+UI: Adding menu item for 'Rotation Rate Modifier' plugin...
+UI: Adding menu item for 'Scale Interpolator' plugin...
+UI: Adding menu item for 'Scale Merge Modifier' plugin...
+UI: Adding menu item for 'Scale Modifier' plugin...
+UI: Adding menu item for 'Scale Oscillator' plugin...
+UI: Adding menu item for 'Sine Force Modifier' plugin...
+UI: Adding menu item for 'Trajectory Rotation Modifier' plugin...
+UI: Adding menu item for 'Velocity Clamp Modifier' plugin...
+UI: Adding menu item for 'Mercury 3 Format Importer' plugin...
+UI: Adding menu item for 'Default Effect Serializer' plugin...
+UI: Searching for library particle effects...
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicFireball.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicSmokePlume.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BeamMeUp.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\CampFire.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\FlowerBloom.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\MagicTrail.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\Paparazzi.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\SimpleRain.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\StarTrail.xml
+    File: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\WaterJet.xml
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Sun.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Sun.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicSmokePlume.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicSmokePlume.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\CampFire.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\CampFire.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Thruster.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Thruster.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Sun.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Sun.xml
+    Using plugin: Default Effect Serializer
+CORE: Adding new texture reference...
+    Filepath: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Basic Emitter
+    Texture: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Thruster.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Thruster.xml
+    Using plugin: Default Effect Serializer
+UI: User requires reinitialising emitter...
+    Budget: 1000
+    Term: 0.8
+CORE: Reinitialising emitter...
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\MagicTrail.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\MagicTrail.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires serialize of particle effect...
+    Filepath: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+CORE: Serializing particle effect to C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires assigning texture reference to emitter...
+    Emitter: Smoke Trail
+    Texture: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Flames
+    Texture: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Sparks
+    Texture: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Flash
+    Texture: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires serialize of particle effect...
+    Filepath: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+CORE: Serializing particle effect to C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\EffectLibrary\BasicExplosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires assigning texture reference to emitter...
+    Emitter: Smoke Trail
+    Texture: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Cloud001.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Smoke Trail
+    Texture: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\SoftSmokey.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Smoke Trail
+    Texture: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Cloud003.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Flames
+    Texture: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Sparks
+    Texture: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\TriangleParticle.png
+UI: User requires assigning texture reference to emitter...
+    Emitter: Flash
+    Texture: C:\source\Particles\ParticlesIncomplete\tools\Mercury Editor\Textures\Cloud001.png
+UI: User requires serialize of particle effect...
+    Filepath: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+CORE: Serializing particle effect to C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires serialize of particle effect...
+    Filepath: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+CORE: Serializing particle effect to C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\explosion.xml
+    Using plugin: Default Effect Serializer
+UI: User requires deserialize of particle effect...
+    Filepath:C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Sun.xml
+CORE: Deserializing particle effect from C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Sun.xml
+    Using plugin: Default Effect Serializer
+UI: User requires serialize of particle effect...
+    Filepath: C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Sun.xml
+CORE: Serializing particle effect to C:\source\Particles\ParticlesIncomplete\Particles\ParticlesContent\Sun.xml
+    Using plugin: Default Effect Serializer
